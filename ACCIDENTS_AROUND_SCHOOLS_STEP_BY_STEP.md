@@ -9,29 +9,11 @@ This guide walks you through creating a brand-new project that faithfully reprod
 
 ### 1) Create the Vite + React + TypeScript project
 
-```bash
-npm create vite@latest accidents-around-schools -- --template react-ts
-cd accidents-around-schools
-git init
-```
-
-Optionally create a `.gitignore` (Vite template usually includes one):
-
-```gitignore
-node_modules
-dist
-.DS_Store
-```
+DONE
 
 ### 2) Link to your remote repository
 
-Replace the URL with your repo:
-
-```bash
-git remote add origin https://github.com/<your-org-or-user>/accidents-around-schools.git
-git add -A && git commit -m "chore: init vite react-ts"
-git push -u origin main
-```
+DONE
 
 ### 3) Install runtime and dev dependencies
 
@@ -81,7 +63,11 @@ Update `src/index.css`:
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root { height: 100%; }
+html,
+body,
+#root {
+  height: 100%;
+}
 ```
 
 ### 5) ESLint and Prettier
@@ -99,11 +85,11 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'prettier'
+    'prettier',
   ],
   settings: { react: { version: 'detect' } },
   env: { browser: true, es2022: true },
-  rules: { 'react/react-in-jsx-scope': 'off' }
+  rules: { 'react/react-in-jsx-scope': 'off' },
 }
 ```
 
@@ -154,7 +140,7 @@ Replace `index.html` with RTL and the Alef font:
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
-  </html>
+</html>
 ```
 
 ### 8) Package scripts
@@ -303,7 +289,10 @@ export const SchoolSelect: React.FC<Props> = ({ schools, onSelectId }) => {
     const label = s.label
     if (label.includes(inputVal)) return true
     const parts = inputVal.split(' ').filter(Boolean)
-    const matches = _(parts).map((p) => label.includes(p)).filter(Boolean).size()
+    const matches = _(parts)
+      .map((p) => label.includes(p))
+      .filter(Boolean)
+      .size()
     return parts.length === matches
   }
 
@@ -428,14 +417,23 @@ import type { InjuredYearRecord, MonthlyRecord, SexRecord } from '../types'
 
 const years = ['2020', '2021', '2022', '2023', '2024', '2025'] as const
 const HEBREW_MONTHS = [
-  'ינואר', 'פברואר', 'מרס', 'אפריל', 'מאי', 'יוני',
-  'יולי', 'אוגוסט', 'ספטמבר', 'אוקטובר', 'נובמבר', 'דצמבר'
+  'ינואר',
+  'פברואר',
+  'מרס',
+  'אפריל',
+  'מאי',
+  'יוני',
+  'יולי',
+  'אוגוסט',
+  'ספטמבר',
+  'אוקטובר',
+  'נובמבר',
+  'דצמבר',
 ]
 
 function getFromStatsByYear(stats: InjuredYearRecord[], year: number, severity: string) {
   const yearRecord =
-    _.find(stats, { accident_year: year }) ??
-    _.find(stats, { accident_year: String(year) })
+    _.find(stats, { accident_year: year }) ?? _.find(stats, { accident_year: String(year) })
   if (_.isUndefined(yearRecord)) return 0
   return parseInt((yearRecord as any)[severity] ?? 0)
 }
@@ -695,12 +693,7 @@ type Props = {
   selectedSchool: School | null
 }
 
-export const Report: React.FC<Props> = ({
-  schools,
-  selectedId,
-  setSelectedId,
-  selectedSchool,
-}) => {
+export const Report: React.FC<Props> = ({ schools, selectedId, setSelectedId, selectedSchool }) => {
   const [injuredStats, setInjuredStats] = useState<InjuredYearRecord[] | null>(null)
   const [monthStats, setMonthStats] = useState<MonthlyRecord[] | null>(null)
   const [genderStats, setGenderStats] = useState<SexRecord[] | null>(null)
@@ -708,19 +701,19 @@ export const Report: React.FC<Props> = ({
   useEffect(() => {
     if (selectedId && selectedId !== 0) {
       axios
-        .get<InjuredYearRecord[]>(
-          `https://www.anyway.co.il/api/injured-around-schools?school_id=${selectedId}`
-        )
+        .get<
+          InjuredYearRecord[]
+        >(`https://www.anyway.co.il/api/injured-around-schools?school_id=${selectedId}`)
         .then((res) => setInjuredStats(res.data))
       axios
-        .get<MonthlyRecord[]>(
-          `https://www.anyway.co.il/api/injured-around-schools-months-graphs-data?school_id=${selectedId}`
-        )
+        .get<
+          MonthlyRecord[]
+        >(`https://www.anyway.co.il/api/injured-around-schools-months-graphs-data?school_id=${selectedId}`)
         .then((res) => setMonthStats(res.data))
       axios
-        .get<SexRecord[]>(
-          `https://www.anyway.co.il/api/injured-around-schools-sex-graphs-data?school_id=${selectedId}`
-        )
+        .get<
+          SexRecord[]
+        >(`https://www.anyway.co.il/api/injured-around-schools-sex-graphs-data?school_id=${selectedId}`)
         .then((res) => setGenderStats(res.data))
     }
   }, [selectedId])
@@ -757,13 +750,13 @@ export const Report: React.FC<Props> = ({
         <div>
           הדו״ח מתבסס על נתוני הלשכה המרכזית לסטטיסטיקה. בדו״ח נספרו עבור כל מוסד חינוך כל
           הפצועים/הרוגים שנפגעו תוך שימוש בתחבורה רכה (הולכי רגל, רוכבי אופניים ואופניים חשמליים
-          ורוכבי קורקינט חשמלי) בגילאים 5-19,  בין השעות 7:00 ל-19:00 ובתוך ריבוע שמרכזו מוסד
-          חינוכי או מקבץ מוסדות חינוכיים וגודל כל צלע ק"מ אחד, בין התאריכים 1.6.2020-31.5.2025.
+          ורוכבי קורקינט חשמלי) בגילאים 5-19, בין השעות 7:00 ל-19:00 ובתוך ריבוע שמרכזו מוסד חינוכי
+          או מקבץ מוסדות חינוכיים וגודל כל צלע ק"מ אחד, בין התאריכים 1.6.2020-31.5.2025.
         </div>
         <div>
-          את הדו"ח הפיקו מתנדבי פרויקט ANYWAY וביניהם: דניאל שלי, מיכל אורן, זיו הרפז, דרור רשף,
-          אגם רפאלי-פרהדיאן, דן פולק, אבי קליימן, בניה פרץ, סלומון רדה, אורי הוך, בר קלמי, כרמל
-          פרדיס, יובל ברוך, ברוך פיקאר, גל רייך ועתליה אלון.
+          את הדו"ח הפיקו מתנדבי פרויקט ANYWAY וביניהם: דניאל שלי, מיכל אורן, זיו הרפז, דרור רשף, אגם
+          רפאלי-פרהדיאן, דן פולק, אבי קליימן, בניה פרץ, סלומון רדה, אורי הוך, בר קלמי, כרמל פרדיס,
+          יובל ברוך, ברוך פיקאר, גל רייך ועתליה אלון.
         </div>
       </div>
     </div>
@@ -817,4 +810,3 @@ git push
 - Responsive: mobile stacks vertically; desktop shows split layout.
 
 You now have a complete, parity-accurate implementation ready for Netlify.
-

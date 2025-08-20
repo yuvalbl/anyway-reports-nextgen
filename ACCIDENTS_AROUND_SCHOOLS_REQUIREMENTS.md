@@ -82,7 +82,7 @@ Note: Some numeric fields may come as strings. Convert to numbers where needed (
 - `Stats`: Displays school name title, a summary blurb for last 5 years, and 3 charts.
 - `Map`: Iframe with the map and a link to the full map view.
 - Report footer (text-only, static):
-  - Paragraph 1: "הדו״ח מתבסס על נתוני הלשכה המרכזית לסטטיסטיקה. בדו״ח נספרו עבור כל מוסד חינוך כל הפצועים/הרוגים שנפגעו תוך שימוש בתחבורה רכה (הולכי רגל, רוכבי אופניים ואופניים חשמליים ורוכבי קורקינט חשמלי) בגילאים 5-19,  בין השעות 7:00 ל-19:00 ובתוך ריבוע שמרכזו מוסד חינוכי או מקבץ מוסדות חינוכיים וגודל כל צלע ק"מ אחד, בין התאריכים 1.6.2020-31.5.2025."
+  - Paragraph 1: "הדו״ח מתבסס על נתוני הלשכה המרכזית לסטטיסטיקה. בדו״ח נספרו עבור כל מוסד חינוך כל הפצועים/הרוגים שנפגעו תוך שימוש בתחבורה רכה (הולכי רגל, רוכבי אופניים ואופניים חשמליים ורוכבי קורקינט חשמלי) בגילאים 5-19, בין השעות 7:00 ל-19:00 ובתוך ריבוע שמרכזו מוסד חינוכי או מקבץ מוסדות חינוכיים וגודל כל צלע ק"מ אחד, בין התאריכים 1.6.2020-31.5.2025."
   - Paragraph 2: "את הדו"ח הפיקו מתנדבי פרויקט ANYWAY וביניהם: דניאל שלי, מיכל אורן, זיו הרפז, דרור רשף, אגם רפאלי-פרהדיאן, דן פולק, אבי קליימן, בניה פרץ, סלומון רדה, אורי הוך, בר קלמי, כרמל פרדיס, יובל ברוך, ברוך פיקאר, גל רייך ועתליה אלון."
 
 ### Charts (Highcharts) — Exact Options
@@ -118,9 +118,9 @@ Note: Some numeric fields may come as strings. Convert to numbers where needed (
 ### Data Handling Rules
 
 - When `selectedId` changes and is truthy (not 0), trigger 3 GET requests in parallel:
-  1) injured by year
-  2) injured by month
-  3) injured by sex
+  1. injured by year
+  2. injured by month
+  3. injured by sex
 - Derive the report title from the selected school's `school_name`.
 - Summary text: compute total sums across 2020–2025 per severity series and display colored labels inline (colors above).
 
@@ -230,4 +230,3 @@ export type SexRecord = {
 ---
 
 This requirements document is the single source of truth for parity. Any deviations (labels, colors, filters, behavior) must be considered bugs.
-

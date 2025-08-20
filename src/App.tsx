@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useMemo, useState } from 'react'
+import axios from 'axios'
+import { Report } from './components/Report'
+import type { School } from './types'
 
-function App() {
-  const [count, setCount] = useState(0)
+export const App: React.FC = () => {
+  const [schools, setSchools] = useState<School[]>([])
+  const [selectedId, setSelectedId] = useState<number | null>(null)
+
+  useEffect(() => {
+    axios
+      .get<School[]>('https://www.anyway.co.il/api/schools-names')
+      .then((res) => setSchools(res.data))
+  }, [])
+
+  const selectedSchool = useMemo(
+    () => schools.find((s) => s.school_id === selectedId) || null,
+    [schools, selectedId]
+  )
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main className="min-h-screen mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+      <div className="rounded-xl bg-white shadow-sm ring-1 ring-black/5 p-4 sm:p-6">
+        <Report
+          schools={schools}
+          selectedId={selectedId}
+          setSelectedId={(id: number) => setSelectedId(id)}
+          selectedSchool={selectedSchool}
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </main>
   )
 }
 
