@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Map } from './Map'
 import { Stats } from './Stats'
 import { SchoolSelect } from './SchoolSelect'
+import VisionZero from './VisionZero'
 import type { School, InjuredYearRecord, MonthlyRecord, SexRecord } from '../types'
 
 type Props = {
@@ -74,6 +75,8 @@ export const Report: React.FC<Props> = ({ schools, selectedId, setSelectedId, se
           </div>
         </div>
       )}
+
+      <VisionZero />
     </div>
   )
 }
