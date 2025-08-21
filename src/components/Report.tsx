@@ -41,27 +41,29 @@ export const Report: React.FC<Props> = ({ schools, selectedId, setSelectedId, se
   const title = selectedSchool?.school_name ?? ''
 
   return (
-    <div className="space-y-6">
+    <div>
       <div className="flex flex-col lg:flex-row gap-6">
-        <div className="lg:w-[42%] w-full space-y-4">
-          <div className="rounded-lg border border-neutral-200/70 p-3">
+        <div className="lg:w-[30%] w-full">
+          <div className="rounded-lg border border-neutral-200/70 p-3 mb-3">
             <SchoolSelect schools={schools} onSelectId={setSelectedId} />
           </div>
-          <div className="rounded-lg border border-neutral-200/70 p-3">
-            <Stats
-              title={title}
-              injuredStats={injuredStats}
-              monthStats={monthStats}
-              genderStats={genderStats}
-            />
-          </div>
+          {selectedSchool && (
+            <div className="rounded-lg border border-neutral-200/70 p-3">
+              <Stats
+                title={title}
+                injuredStats={injuredStats}
+                monthStats={monthStats}
+                genderStats={genderStats}
+              />
+            </div>
+          )}
         </div>
         <div className="lg:flex-1 w-full">
           {selectedSchool && <Map school={selectedSchool} schoolId={selectedId} />}
         </div>
       </div>
       {selectedSchool && (
-        <div className="text-sm leading-6 text-neutral-800 space-y-2">
+        <div className="text-sm leading-6 text-neutral-800 mt-3">
           <div>
             הדו״ח מתבסס על נתוני הלשכה המרכזית לסטטיסטיקה. בדו״ח נספרו עבור כל מוסד חינוך כל
             הפצועים/הרוגים שנפגעו תוך שימוש בתחבורה רכה (הולכי רגל, רוכבי אופניים ואופניים חשמליים

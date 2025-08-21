@@ -24,7 +24,7 @@ export const Map: React.FC<Props> = ({ school }) => {
     : 'לצפיה במפה פשוטה בלבד'
 
   return (
-    <div className="rounded-lg border border-neutral-200/70 p-4">
+    <div className="rounded-lg border border-neutral-200/70 p-4 h-full flex flex-col min-h-[50vh]">
       <div className="text-lg font-semibold mb-1">
         תאונות עם נפגעים (הולכי רגל, רוכבי אופניים וקורקינט) בסביבת מוסד הלימודים
       </div>
@@ -39,8 +39,8 @@ export const Map: React.FC<Props> = ({ school }) => {
           לחצו כאן
         </a>
       </div>
-      <div className="aspect-video w-full overflow-hidden rounded-md ring-1 ring-black/5">
-        <iframe title="anyway-map" src={url} className="h-full w-full border-0"></iframe>
+      <div className="flex-1 w-full overflow-hidden rounded-md ring-1 ring-black/5 min-h-[50vh] flex">
+        <iframe title="anyway-map" src={url} className="flex-1 w-full border-0"></iframe>
       </div>
     </div>
   )

@@ -1,4 +1,3 @@
-
 import React, { useMemo } from 'react'
 import _ from 'lodash'
 import type { Options } from 'highcharts'
@@ -157,7 +156,7 @@ export const Stats: React.FC<Props> = ({ title, injuredStats, monthStats, gender
   const pie = useMemo(() => pieOptions(genderStats), [genderStats])
 
   return (
-    <div className="space-y-4">
+    <div>
       <div className="text-xl font-bold">{title || ''}</div>
 
       {injuredStats && (
@@ -178,7 +177,7 @@ export const Stats: React.FC<Props> = ({ title, injuredStats, monthStats, gender
               {}
             )
             return (
-              <div className="space-y-0.5">
+              <div>
                 {Object.entries(summary).map(([k, v]) => (
                   <div key={k}>
                     {v.sumInjured} <span style={{ color: v.color }}>{k}</span>

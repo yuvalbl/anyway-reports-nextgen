@@ -9,14 +9,13 @@ export const VisionZero: React.FC = () => {
   }
 
   const renderTabContent = (content: VisionZeroContent) => (
-    <div className="space-y-4">
+    <div>
       {content.image && (
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex justify-center">
           <img
             src={`/images/${content.image}`}
             height="250"
             alt={content.alt}
-            className="lg:float-right lg:mr-4 lg:ml-0"
           />
         </div>
       )}
@@ -37,19 +36,19 @@ export const VisionZero: React.FC = () => {
   )
 
   return (
-    <div className="bg-white rounded-xl shadow-sm ring-1 ring-black/5 p-4 sm:p-6 h-[800px]">
+    <div className="bg-white rounded-xl p-4 sm:p-6 flex flex-col h-full">
       <div className="text-xl font-bold mb-6 text-center">
-        דרכים לשיפור הבטיחות בדרכים על פי חזון אפס / דרור רשף
+        דרכים לשיפור הבטיחות בדרכים על פי חזון אפס
       </div>
       
       {/* Mobile: Horizontal scrollable tabs */}
       <div className="lg:hidden mb-6">
-        <div className="flex space-x-2 overflow-x-auto pb-2">
+        <div className="flex space-x-1 overflow-x-auto pb-2 scrollbar-hide">
           {VISION_ZERO_CONTENT.map((content, index) => (
             <button
               key={index}
               onClick={() => handleTabChange(index)}
-              className={`whitespace-nowrap px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`flex-shrink-0 w-28 px-3 py-2 rounded-lg text-sm font-medium transition-colors text-center leading-tight ${
                 currentTab === index
                   ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -62,9 +61,9 @@ export const VisionZero: React.FC = () => {
       </div>
 
       {/* Desktop: Vertical tabs */}
-      <div className="hidden lg:flex">
+      <div className="hidden lg:flex flex-1">
         <div className="w-64 border-r border-gray-200 pr-4">
-          <div className="space-y-1">
+          <div>
             {VISION_ZERO_CONTENT.map((content, index) => (
               <button
                 key={index}
@@ -81,13 +80,13 @@ export const VisionZero: React.FC = () => {
           </div>
         </div>
         
-        <div className="flex-1 pl-6 h-[700px] overflow-y-auto">
+        <div className="flex-1 pr-4 overflow-y-auto">
           {renderTabContent(VISION_ZERO_CONTENT[currentTab])}
         </div>
       </div>
 
       {/* Mobile: Tab content */}
-      <div className="lg:hidden h-[700px] overflow-y-auto">
+      <div className="lg:hidden flex-1 overflow-y-auto">
         {renderTabContent(VISION_ZERO_CONTENT[currentTab])}
       </div>
     </div>

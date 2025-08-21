@@ -19,7 +19,7 @@ export const App: React.FC = () => {
   )
 
   return (
-    <main className="min-h-screen mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+    <main>
       <div className="rounded-xl bg-white shadow-sm ring-1 ring-black/5 p-4 sm:p-6">
         <Report
           schools={schools}
