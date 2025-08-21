@@ -74,7 +74,7 @@ export const SchoolSelect: React.FC<Props> = ({ schools, onSelectId }) => {
         <div className="relative">
           <Combobox.Input
             className="w-full rounded-md border border-neutral-300 px-3 py-2 text-base outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="חפש על פי שם ישוב או שם מוסד חינוך"
+            placeholder="חפש על פי ישוב או מוסד חינוך"
             dir="rtl"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
