@@ -4,6 +4,10 @@ import { Map } from './Map'
 import { Stats } from './Stats'
 import { SchoolSelect } from './SchoolSelect'
 import { VisionZero } from './VisionZero'
+import MunicipalityTable from './MunicipalityTable'
+import TopCitiesTable from './TopCitiesTable'
+import TransportationStats from './TransportationStats'
+import EducationalClustersTable from './EducationalClustersTable'
 import { MainContent } from './Typography'
 import type { School, InjuredYearRecord, MonthlyRecord, SexRecord } from '../types'
 
@@ -81,7 +85,13 @@ export const Report: React.FC<Props> = ({ schools, selectedId, setSelectedId, se
         </div>
       )}
 
-      <VisionZero />
+      <div className="mt-16 space-y-16 px-4 lg:px-16 xl:px-72">
+        <MunicipalityTable />
+        <TopCitiesTable />
+        <EducationalClustersTable />
+        <TransportationStats />
+        <VisionZero />
+      </div>
     </div>
   )
 }

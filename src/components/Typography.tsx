@@ -30,15 +30,15 @@ export const Typography: React.FC<TypographyProps> = ({
     },
     'table-header': {
       mobile: "text-[16px] leading-[1.3] tracking-[-0.005em] font-[600]",
-      desktop: "md:text-[18px]"
+      desktop: "md:text-[16px]"
     },
     'table-body': {
       mobile: "text-[14px] leading-[1.4] tracking-[-0.005em] font-[400]",
-      desktop: "md:text-[16px]"
+      desktop: "md:text-[14px]"
     },
     'table-caption': {
-      mobile: "text-[12px] leading-[1.3] tracking-[-0.005em] font-[400]",
-      desktop: "md:text-[14px]"
+      mobile: "text-[18px] leading-[1.3] tracking-[-0.005em] font-[400]",
+      desktop: "md:text-[27px]"
     }
   }
 
