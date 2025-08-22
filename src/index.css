@@ -1,7 +1,23 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Moses Text';
+  src: url('/assets/MosesText_1.0VF.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moses Display';
+  src: url('/assets/MosesDisplay_1.0VF.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 html,
 body,
 #root {
   height: 100%;
+  font-family: 'Moses Display', system-ui, -apple-system, sans-serif;
+  direction: rtl;
 }

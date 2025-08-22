@@ -1,0 +1,50 @@
+import React, { useState, useEffect } from 'react'
+import { HeroTitle, HeroSubtitle } from './Typography'
+
+export const Hero: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  return (
+    <section className="relative w-full h-[873px] flex items-center justify-center text-center">
+      <div 
+        className="absolute inset-0 bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: `url('/images/hero-background.jpg')`,
+          backgroundPosition: isMobile ? '-1250px center' : 'center'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(250,254,255,0)] via-[rgba(250,254,255,0)] to-[rgba(232,247,252,1)]" style={{
+          background: 'linear-gradient(180deg, rgba(250, 254, 255, 0) 14%, rgba(232, 247, 252, 1) 82%)'
+        }}></div>
+      </div>
+      
+      <div className="absolute bottom-15 z-10 max-w-7xl px-6 lg:px-16 xl:px-20">
+        <HeroTitle className="mb-8">
+          בדקו וגלו: אלו הדרכים המסוכנות בדרך לבית הספר שלכם
+        </HeroTitle>
+        
+        <HeroSubtitle className="mx-auto">
+          2,587,000 תלמידים וילדי גן יפתחו את שנת הלימודים ב-1 בספטמבר. 
+          חלקם יחצו כבישים וצמתים בדרכם אל מוסדות הלימוד, בין אם ברגל, 
+          באופניים, בקורקינט או בכלי רכב. ב-5 השנים האחרונות נפגעו 6,260 
+          ילדים בדרכים הללו - שחלקן נחשבות מסוכנות מאוד. דוח ANYWAY מבית 
+          "נתון לשינוי" ובשיתוף "אור ירוק" חושף את אותם הכבישים - כתבו 
+          את שם המוסד החינוכי שלכם, גלו אותן והצילו חיים
+        </HeroSubtitle>
+      </div>
+    </section>
+  )
+}
+
+export default Hero

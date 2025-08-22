@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import axios from 'axios'
+import { Header } from './components/Header'
+import { Hero } from './components/Hero'
 import { Report } from './components/Report'
 import type { School } from './types'
 
@@ -20,6 +22,8 @@ export const App: React.FC = () => {
 
   return (
     <main>
+      <Header />
+      <Hero />
       <div className="rounded-xl bg-white shadow-sm ring-1 ring-black/5 p-4 sm:p-6">
         <Report
           schools={schools}
