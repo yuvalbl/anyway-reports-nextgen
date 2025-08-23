@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useEffect, useState } from 'react'
 import _ from 'lodash'
 import type { Options } from 'highcharts'
 import { Graph } from './Graph'
@@ -151,13 +151,28 @@ type Props = {
 }
 
 export const Stats: React.FC<Props> = ({ title, injuredStats, monthStats, genderStats }) => {
+  const [isHighlighted, setIsHighlighted] = useState(false)
   const line = useMemo(() => lineOptions(injuredStats), [injuredStats])
   const column = useMemo(() => columnOptions(monthStats), [monthStats])
   const pie = useMemo(() => pieOptions(genderStats), [genderStats])
 
+  useEffect(() => {
+    if (title) {
+      setIsHighlighted(true)
+      const timer = setTimeout(() => setIsHighlighted(false), 800)
+      return () => clearTimeout(timer)
+    }
+  }, [title])
+
   return (
     <div>
-      <div className="text-xl font-bold">{title || ''}</div>
+      <div className={`text-xl font-bold transition-all duration-300 ${
+        isHighlighted 
+          ? 'text-blue-600 scale-[1.03] drop-shadow-lg' 
+          : 'text-gray-800'
+      }`}>
+        {title || ''}
+      </div>
 
       {injuredStats && (
         <div className="text-sm font-semibold">

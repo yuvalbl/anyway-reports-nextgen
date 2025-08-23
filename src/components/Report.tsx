@@ -52,26 +52,42 @@ export const Report: React.FC<Props> = ({ schools, selectedId, setSelectedId, se
   return (
     <div className={containerSpacing}>
       <div className={mainContentSpacing}>
-        <div className="flex flex-col lg:flex-row gap-6 mb-16">
-          <div className="lg:w-[30%] w-full">
-            <div className="rounded-lg border border-neutral-200/70 p-3 mb-3">
+        {/* Searchbox Section - Responsive Layout */}
+        {!selectedSchool ? (
+          // When no school is selected - centered and full width
+          <div className="w-full flex justify-center mb-16">
+            <div className="w-full max-w-2xl">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                  חפש מוסד חינוך
+                </h2>
+              </div>
               <SchoolSelect schools={schools} onSelectId={setSelectedId} />
             </div>
-            {selectedSchool && (
-              <div className="rounded-lg border border-neutral-200/70 p-3">
-                <Stats
-                  title={title}
-                  injuredStats={injuredStats}
-                  monthStats={monthStats}
-                  genderStats={genderStats}
-                />
+          </div>
+        ) : (
+          // When school is selected - original layout
+          <div className="flex flex-col lg:flex-row gap-6 mb-16">
+            <div className="lg:w-[30%] w-full">
+              <div className="rounded-lg border border-neutral-200/70 p-3 mb-3">
+                <SchoolSelect schools={schools} onSelectId={setSelectedId} />
               </div>
-            )}
+              {selectedSchool && (
+                <div className="rounded-lg border border-neutral-200/70 p-3">
+                  <Stats
+                    title={title}
+                    injuredStats={injuredStats}
+                    monthStats={monthStats}
+                    genderStats={genderStats}
+                  />
+                </div>
+              )}
+            </div>
+            <div className="lg:flex-1 w-full">
+              {selectedSchool && <Map school={selectedSchool} schoolId={selectedId} />}
+            </div>
           </div>
-          <div className="lg:flex-1 w-full">
-            {selectedSchool && <Map school={selectedSchool} schoolId={selectedId} />}
-          </div>
-        </div>
+        )}
       </div>
 
       <div className={mainContentSpacing}>
