@@ -33,14 +33,14 @@ export default function TransportationStats() {
   return (
     <div className="w-full mb-16">
       {/* Title */}
-      <div className="rounded-t-lg p-4" style={{backgroundColor: '#E8F7FC'}}>
+      <div className="rounded-t-lg border border-gray-200 p-4" style={{backgroundColor: '#E8F7FC'}}>
         <TableCaption as="h3" className="text-center">
           נפגעים סביב מוסדות הלימוד – השוואה בין תקופות:
         </TableCaption>
       </div>
 
       {/* Table */}
-      <div className="bg-white border border-gray-200 overflow-x-auto">
+      <div className="bg-white border border-gray-200 border-t-0 rounded-b-lg overflow-x-auto">
         <table className="w-full min-w-[900px]">
           <thead>
             {/* Column Headers */}

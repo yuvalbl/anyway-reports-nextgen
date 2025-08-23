@@ -32,14 +32,14 @@ export default function MunicipalityTable() {
   return (
     <div className="w-full mb-16">
       {/* Title */}
-      <div className="rounded-t-lg p-4" style={{backgroundColor: '#ECECEC'}}>
+      <div className="rounded-t-lg border border-gray-200 p-4" style={{backgroundColor: '#ECECEC'}}>
         <TableCaption as="h3" className="text-center">
           הישובים בהם הייתה מגמה שלילית/חיובית בין שתי התקופות:
         </TableCaption>
       </div>
 
       {/* Table */}
-      <div className="bg-white border border-gray-200 overflow-x-auto">
+      <div className="bg-white border border-gray-200 border-t-0 rounded-b-lg overflow-x-auto">
         <table className="w-full">
           {/* Header */}
           <thead>
