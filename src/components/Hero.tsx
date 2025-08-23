@@ -30,18 +30,28 @@ export const Hero: React.FC = () => {
       </div>
       
       <div className="absolute bottom-15 z-10 max-w-7xl px-6 lg:px-16 xl:px-20">
-        <HeroTitle className="mb-8">
-          בדקו וגלו: אלו הדרכים המסוכנות בדרך לבית הספר שלכם
-        </HeroTitle>
+        <div 
+          className="opacity-0 translate-y-8 animate-fade-in-up mb-8"
+          style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
+        >
+          <HeroTitle>
+            בדקו וגלו: אלו הדרכים המסוכנות בדרך לבית הספר שלכם
+          </HeroTitle>
+        </div>
         
-        <HeroSubtitle className="mx-auto">
-          2,587,000 תלמידים וילדי גן יפתחו את שנת הלימודים ב-1 בספטמבר. 
-          חלקם יחצו כבישים וצמתים בדרכם אל מוסדות הלימוד, בין אם ברגל, 
-          באופניים, בקורקינט או בכלי רכב. ב-5 השנים האחרונות נפגעו 6,260 
-          ילדים בדרכים הללו - שחלקן נחשבות מסוכנות מאוד. דוח ANYWAY מבית 
-          "נתון לשינוי" ובשיתוף "אור ירוק" חושף את אותם הכבישים - כתבו 
-          את שם המוסד החינוכי שלכם, גלו אותן והצילו חיים
-        </HeroSubtitle>
+        <div 
+          className="opacity-0 translate-y-8 animate-fade-in-up mx-auto"
+          style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}
+        >
+          <HeroSubtitle>
+            2,587,000 תלמידים וילדי גן יפתחו את שנת הלימודים ב-1 בספטמבר. 
+            חלקם יחצו כבישים וצמתים בדרכם אל מוסדות הלימוד, בין אם ברגל, 
+            באופניים, בקורקינט או בכלי רכב. ב-5 השנים האחרונות נפגעו 6,260 
+            ילדים בדרכים הללו - שחלקן נחשבות מסוכנות מאוד. דוח ANYWAY מבית 
+            "נתון לשינוי" ובשיתוף "אור ירוק" חושף את אותם הכבישים - כתבו 
+            את שם המוסד החינוכי שלכם, גלו אותן והצילו חיים
+          </HeroSubtitle>
+        </div>
       </div>
     </section>
   )

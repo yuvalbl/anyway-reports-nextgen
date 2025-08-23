@@ -14,7 +14,7 @@ import { MainContent } from './Typography'
 import type { School, InjuredYearRecord, MonthlyRecord, SexRecord } from '../types'
 
 const containerSpacing = 'px-4 sm:p-6'
-const mainContentSpacing = 'px-4 lg:px-16 xl:px-72 mb-16'
+const mainContentSpacing = 'lg:px-16 xl:px-72 mb-16'
 
 type Props = {
   schools: School[]

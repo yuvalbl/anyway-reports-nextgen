@@ -3,7 +3,7 @@ import xIcon from '../assets/icons/x.svg'
 import whatsappIcon from '../assets/icons/whatsapp.svg'
 import instagramIcon from '../assets/icons/instagram.svg'
 import mailIcon from '../assets/icons/mail.svg'
-import ynetLogo from '../assets/ynet_logo.png'
+import ynetLogo from '../assets/ynet_logo.svg'
 
 export const Header: React.FC = () => {
   return (

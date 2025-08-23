@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { VISION_ZERO_CONTENT, type VisionZeroContent } from '../constants/visionZero'
+import { MainContent } from './Typography'
 
 export const VisionZero: React.FC = () => {
   const [currentTab, setCurrentTab] = useState(0)
@@ -11,7 +12,7 @@ export const VisionZero: React.FC = () => {
   const renderTabContent = (content: VisionZeroContent) => (
     <div>
       {content.image && (
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-4">
           <img
             src={`/images/${content.image}`}
             height="250"
@@ -19,16 +20,18 @@ export const VisionZero: React.FC = () => {
           />
         </div>
       )}
-      <div className="text-sm leading-6">{content.body}</div>
+      <MainContent className="whitespace-pre-line">{content.body}</MainContent>
       {content.image2 && (
-        <figure className="text-center">
+        <figure className="text-center mt-4">
           <img
             src={`/images/${content.image2}`}
             className="max-w-[70%] min-w-[240px] mx-auto"
             alt={content.alt}
           />
           {content.image2Caption && (
-            <figcaption className="text-sm mt-2">{content.image2Caption}</figcaption>
+            <figcaption className="text-sm mt-2">
+              <MainContent className="whitespace-pre-line">{content.image2Caption}</MainContent>
+            </figcaption>
           )}
         </figure>
       )}
@@ -37,12 +40,12 @@ export const VisionZero: React.FC = () => {
 
   return (
     <div className="rounded-lg border border-neutral-200/70">
-      <div className="text-xl font-bold mb-6 text-center">
+      <div className="text-xl font-bold my-6 text-center">
         דרכים לשיפור הבטיחות בדרכים על פי חזון אפס
       </div>
       
       {/* Mobile: Horizontal scrollable tabs */}
-      <div className="lg:hidden mb-6">
+      <div className="lg:hidden">
         <div className="flex space-x-1 overflow-x-auto pb-2 scrollbar-hide">
           {VISION_ZERO_CONTENT.map((content, index) => (
             <button
@@ -86,7 +89,7 @@ export const VisionZero: React.FC = () => {
       </div>
 
       {/* Mobile: Tab content */}
-      <div className="lg:hidden flex-1 overflow-y-auto">
+      <div className="lg:hidden flex-1 p-4 overflow-y-auto">
         {renderTabContent(VISION_ZERO_CONTENT[currentTab])}
       </div>
     </div>
