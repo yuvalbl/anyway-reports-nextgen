@@ -10,11 +10,10 @@ import TransportationStats from './TransportationStats'
 import EducationalClustersTable from './EducationalClustersTable'
 import { ReportArticle } from './ReportArticle'
 import { MapEmbed } from './MapEmbed'
-import { MainContent } from './Typography'
 import type { School, InjuredYearRecord, MonthlyRecord, SexRecord } from '../types'
 
 const containerSpacing = 'px-4 sm:p-6'
-const mainContentSpacing = 'lg:px-16 xl:px-72 mb-16'
+const mainContentSpacing = 'lg:px-16 2xl:px-72 mb-16'
 
 type Props = {
   schools: School[]

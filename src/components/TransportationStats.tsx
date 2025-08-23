@@ -47,42 +47,24 @@ export default function TransportationStats() {
             {/* Column Headers */}
             <tr className="border-b border-gray-300" style={{backgroundColor: '#E8F7FC'}}>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>סה״כ נפגעים</TableHeader>
+                <TableHeader>אמצעי תחבורה</TableHeader>
               </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap" colSpan={2}>
                 <TableHeader>פצועים קל</TableHeader>
               </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap" colSpan={2}>
                 <TableHeader>פצועים קשה</TableHeader>
               </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap" colSpan={2}>
                 <TableHeader>הרוגים</TableHeader>
               </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap" colSpan={2}>
                 <TableHeader>סה״כ נפגעים</TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>פצועים קל</TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>פצועים קשה</TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>הרוגים</TableHeader>
-              </th>
-              <th className="p-3 text-right">
               </th>
             </tr>
             {/* Period Labels */}
             <tr className="border-b border-gray-300" style={{backgroundColor: '#E8F7FC'}}>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableBody className="text-gray-600 font-semibold">2020-2025</TableBody>
-              </th>
-              <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableBody className="text-gray-600 font-semibold">2020-2025</TableBody>
-              </th>
-              <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableBody className="text-gray-600 font-semibold">2020-2025</TableBody>
               </th>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
                 <TableBody className="text-gray-600 font-semibold">2020-2025</TableBody>
@@ -91,54 +73,65 @@ export default function TransportationStats() {
                 <TableBody className="text-gray-600 font-semibold">2015-2020</TableBody>
               </th>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableBody className="text-gray-600 font-semibold">2015-2020</TableBody>
+                <TableBody className="text-gray-600 font-semibold">2020-2025</TableBody>
               </th>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
                 <TableBody className="text-gray-600 font-semibold">2015-2020</TableBody>
               </th>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
+                <TableBody className="text-gray-600 font-semibold">2020-2025</TableBody>
+              </th>
+              <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
                 <TableBody className="text-gray-600 font-semibold">2015-2020</TableBody>
               </th>
-              <th className="p-2 text-right">
+              <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
+                <TableBody className="text-gray-600 font-semibold">2020-2025</TableBody>
+              </th>
+              <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
+                <TableBody className="text-gray-600 font-semibold">2015-2020</TableBody>
               </th>
             </tr>
           </thead>
           <tbody>
-            {transportationData.map((mode, index) => (
+            {transportationData.map((mode) => (
               <tr key={mode.mode} className="border-b border-gray-200 hover:bg-gray-50">
-                {/* 2020-2025 Period (will appear on right in RTL) */}
+                {/* Mode Name - now leftmost */}
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{mode.period2020_2025.totalInjured.toLocaleString()}</TableBody>
+                  <TableBody>
+                    {mode.mode}
+                  </TableBody>
                 </td>
+
+                {/* Lightly Injured */}
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
                   <TableBody>{mode.period2020_2025.lightInjuries.toLocaleString()}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  <TableBody>{mode.period2015_2020.lightInjuries.toLocaleString()}</TableBody>
+                </td>
+
+                {/* Severely Injured */}
+                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
                   <TableBody>{mode.period2020_2025.severeInjuries}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{mode.period2020_2025.deaths}</TableBody>
+                  <TableBody>{mode.period2015_2020.severeInjuries}</TableBody>
                 </td>
 
-                {/* 2015-2020 Period (will appear on left in RTL) */}
+                {/* Killed */}
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{mode.period2015_2020.totalInjured.toLocaleString()}</TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{mode.period2015_2020.lightInjuries.toLocaleString()}</TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{mode.period2015_2020.severeInjuries}</TableBody>
+                  <TableBody>{mode.period2020_2025.deaths}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
                   <TableBody>{mode.period2015_2020.deaths}</TableBody>
                 </td>
 
-                {/* Mode Name */}
-                <td className="p-3 text-right whitespace-nowrap">
-                  <TableBody className={`${index === 0 ? 'font-semibold' : ''}`}>
-                    {mode.mode}
-                  </TableBody>
+                {/* Total Injured - now last */}
+                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  <TableBody>{mode.period2020_2025.totalInjured.toLocaleString()}</TableBody>
+                </td>
+                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  <TableBody>{mode.period2015_2020.totalInjured.toLocaleString()}</TableBody>
                 </td>
               </tr>
             ))}

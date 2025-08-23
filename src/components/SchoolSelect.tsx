@@ -71,7 +71,7 @@ export const SchoolSelect: React.FC<Props> = ({ schools, onSelectId }) => {
   return (
     <div className="relative">
       <Combobox value={selected} onChange={handleSelect} nullable>
-        <div className="relative">
+        <div className="relative" id="schoolSearch">
           <Combobox.Input
             className="w-full rounded-md border border-neutral-300 px-3 py-2 text-base outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="חפש על פי ישוב או מוסד חינוך"
