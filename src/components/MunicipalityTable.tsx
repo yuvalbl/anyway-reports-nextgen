@@ -1,5 +1,5 @@
 import { type MunicipalityComparison } from '../types'
-import { Typography } from './Typography'
+import { TableCaption, TableHeader, TableBody } from './Typography'
 
 // Data from Figma design - Municipality comparison between periods
 const improvementData: MunicipalityComparison[] = [
@@ -33,9 +33,9 @@ export default function MunicipalityTable() {
     <div className="w-full mb-16">
       {/* Title */}
       <div className="rounded-t-lg p-4" style={{backgroundColor: '#ECECEC'}}>
-        <Typography variant="table-caption" as="h3" className="text-center text-gray-800">
+        <TableCaption as="h3" className="text-center">
           הישובים בהם הייתה מגמה שלילית/חיובית בין שתי התקופות:
-        </Typography>
+        </TableCaption>
       </div>
 
       {/* Table */}
@@ -45,24 +45,24 @@ export default function MunicipalityTable() {
           <thead>
             <tr className="border-b border-gray-200">
               <th colSpan={2} className="p-3 text-center whitespace-nowrap" style={{backgroundColor: '#ECECEC'}}>
-                <Typography variant="table-header" className="text-gray-700">החמרה</Typography>
+                <TableHeader>החמרה</TableHeader>
               </th>
               <th colSpan={2} className="p-3 text-center whitespace-nowrap" style={{backgroundColor: '#ECECEC'}}>
-                <Typography variant="table-header" className="text-gray-700">שיפור</Typography>
+                <TableHeader>שיפור</TableHeader>
               </th>
             </tr>
             <tr className="border-b border-gray-300" style={{backgroundColor: '#ECECEC'}}>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">ישוב</Typography>
+                <TableHeader>ישוב</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">% שינוי</Typography>
+                <TableHeader>% שינוי</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">ישוב</Typography>
+                <TableHeader>ישוב</TableHeader>
               </th>
               <th className="p-3 text-right whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">% שינוי</Typography>
+                <TableHeader>% שינוי</TableHeader>
               </th>
             </tr>
           </thead>
@@ -75,24 +75,24 @@ export default function MunicipalityTable() {
                 <tr key={rowIndex} className="border-b border-gray-200 hover:bg-gray-50">
                   {/* First columns - Worsening (will appear on right in RTL) */}
                   <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                    <Typography variant="table-body" className="text-gray-800">{worseningItem?.cityName || ''}</Typography>
+                    <TableBody>{worseningItem?.cityName || ''}</TableBody>
                   </td>
                   <td className="p-3 text-right border-r border-gray-300 bg-red-50 whitespace-nowrap">
-                    <Typography variant="table-body" className="text-gray-800">{worseningItem?.percentChange || ''}</Typography>
+                    <TableBody>{worseningItem?.percentChange || ''}</TableBody>
                   </td>
                   
                   {/* Last columns - Improvement (will appear on left in RTL) */}
                   <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                    <Typography variant="table-body" className="text-gray-800">{improvementItem?.cityName || ''}</Typography>
+                    <TableBody>{improvementItem?.cityName || ''}</TableBody>
                   </td>
                   <td className="p-3 text-right bg-green-50 whitespace-nowrap">
-                    <Typography variant="table-body" className="text-gray-800">
+                    <TableBody>
                       {improvementItem?.percentChange ? 
                         improvementItem.percentChange.toString().startsWith('-') ? 
                           improvementItem.percentChange.toString().substring(1) + '-' : 
                           improvementItem.percentChange 
                         : ''}
-                    </Typography>
+                    </TableBody>
                   </td>
                 </tr>
               )

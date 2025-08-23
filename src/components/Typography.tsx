@@ -25,7 +25,7 @@ export const Typography: React.FC<TypographyProps> = ({
       desktop: "md:text-[23px]"
     },
     'main-content': {
-      mobile: "text-[18px] leading-[1.5] tracking-[-0.005em] font-[400]",
+      mobile: "text-[20px] leading-[1.5] tracking-[-0.005em] font-[400]",
       desktop: "md:text-[20px]"
     },
     'table-header': {
@@ -72,16 +72,16 @@ export const MainContent: React.FC<{ children: React.ReactNode; className?: stri
   <Typography variant="main-content" as="p" {...props} />
 )
 
-export const TableHeader: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = (props) => (
-  <Typography variant="table-header" as="th" {...props} />
+export const TableHeader: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = ({ className, ...props }) => (
+  <Typography variant="table-header" as="th" className={cn("text-gray-700", className)} {...props} />
 )
 
-export const TableBody: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = (props) => (
-  <Typography variant="table-body" as="td" {...props} />
+export const TableBody: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = ({ className, ...props }) => (
+  <Typography variant="table-body" as="td" className={cn("text-gray-800", className)} {...props} />
 )
 
-export const TableCaption: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = (props) => (
-  <Typography variant="table-caption" as="caption" {...props} />
+export const TableCaption: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = ({ className, ...props }) => (
+  <Typography variant="table-caption" as="caption" className={cn("text-gray-800", className)} {...props} />
 )
 
 export default Typography 

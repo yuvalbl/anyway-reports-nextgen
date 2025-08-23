@@ -1,5 +1,5 @@
 import { type CityRanking } from '../types'
-import { Typography } from './Typography'
+import { TableCaption, TableHeader, TableBody } from './Typography'
 
 // Data from Figma design - 20 cities with highest composite scores
 const topCitiesData: CityRanking[] = [
@@ -210,9 +210,9 @@ export default function TopCitiesTable() {
     <div className="w-full mb-16">
       {/* Title */}
       <div className="rounded-t-lg p-4" style={{backgroundColor: '#E8F7FC'}}>
-        <Typography variant="table-caption" as="h3" className="text-center text-gray-800">
+        <TableCaption as="h3" className="text-center">
           20 היישובים בעלי הדירוג המשוקלל הגבוה ביותר בין 2025-2020:
-        </Typography>
+        </TableCaption>
       </div>
 
       {/* Table */}
@@ -222,39 +222,39 @@ export default function TopCitiesTable() {
             <tr className="border-b border-gray-300" style={{backgroundColor: '#E8F7FC'}}>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap"></th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">
+                <TableHeader>
                   ישוב
-                </Typography>
+                </TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">
+                <TableHeader>
                   הרוגים
-                </Typography>
+                </TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">
+                <TableHeader>
                   פצועים קשה
-                </Typography>
+                </TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">
+                <TableHeader>
                   פצועים קל
-                </Typography>
+                </TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">
+                <TableHeader>
                   סה״כ נפגעים
-                </Typography>
+                </TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">
+                <TableHeader>
                   סה״כ תאונות
-                </Typography>
+                </TableHeader>
               </th>
               <th className="p-3 text-right whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">
+                <TableHeader>
                   ציון משוקלל
-                </Typography>
+                </TableHeader>
               </th>
             </tr>
           </thead>
@@ -262,44 +262,44 @@ export default function TopCitiesTable() {
             {topCitiesData.map((city) => (
               <tr key={city.rank} className="border-b border-gray-200 hover:bg-gray-50">
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800 font-semibold">
+                  <TableBody className="font-semibold">
                     {city.rank}
-                  </Typography>
+                  </TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">
+                  <TableBody>
                     {city.cityName}
-                  </Typography>
+                  </TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">
+                  <TableBody>
                     {city.deaths}
-                  </Typography>
+                  </TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">
+                  <TableBody>
                     {city.severeInjuries}
-                  </Typography>
+                  </TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">
+                  <TableBody>
                     {city.lightInjuries}
-                  </Typography>
+                  </TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">
+                  <TableBody>
                     {city.totalInjured}
-                  </Typography>
+                  </TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">
+                  <TableBody>
                     {city.totalAccidents}
-                  </Typography>
+                  </TableBody>
                 </td>
                 <td className="p-3 text-right whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">
+                  <TableBody>
                     {city.compositeScore.toLocaleString()}
-                  </Typography>
+                  </TableBody>
                 </td>
               </tr>
             ))}

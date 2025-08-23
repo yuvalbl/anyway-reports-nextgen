@@ -24,7 +24,7 @@ export const App: React.FC = () => {
     <main>
       <Header />
       <Hero />
-      <div className="rounded-xl bg-white shadow-sm ring-1 ring-black/5 p-4 sm:p-6">
+      <div className="bg-white">
         <Report
           schools={schools}
           selectedId={selectedId}

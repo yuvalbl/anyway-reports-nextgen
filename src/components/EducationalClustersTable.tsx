@@ -1,5 +1,5 @@
 import { type EducationalCluster } from '../types'
-import { Typography } from './Typography'
+import { TableCaption, TableHeader, TableBody } from './Typography'
 
 // Data from Figma design - Educational institution clusters
 const educationalClustersData: EducationalCluster[] = [
@@ -20,9 +20,9 @@ export default function EducationalClustersTable() {
     <div className="w-full mb-16">
       {/* Title */}
       <div className="rounded-t-lg p-4" style={{backgroundColor: '#ECECEC'}}>
-        <Typography variant="table-caption" as="h3" className="text-center text-gray-800">
+        <TableCaption as="h3" className="text-center">
           20 היישובים בעלי הדירוג המשוקלל הגבוה ביותר בין 2025-2020:
-        </Typography>
+        </TableCaption>
       </div>
 
       {/* Table */}
@@ -31,22 +31,22 @@ export default function EducationalClustersTable() {
           <thead>
             <tr className="border-b border-gray-300" style={{backgroundColor: '#ECECEC'}}>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">המקבץ</Typography>
+                <TableHeader>המקבץ</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">ישוב</Typography>
+                <TableHeader>ישוב</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">סה״כ הרוגים במקבץ</Typography>
+                <TableHeader>סה״כ הרוגים במקבץ</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">סה״כ פצועים קשה במקבץ</Typography>
+                <TableHeader>סה״כ פצועים קשה במקבץ</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">סה״כ נפגעים במקבץ</Typography>
+                <TableHeader>סה״כ נפגעים במקבץ</TableHeader>
               </th>
               <th className="p-3 text-right whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">סה״כ מוסדות לימוד במקבץ</Typography>
+                <TableHeader>סה״כ מוסדות לימוד במקבץ</TableHeader>
               </th>
             </tr>
           </thead>
@@ -54,22 +54,22 @@ export default function EducationalClustersTable() {
             {educationalClustersData.map((cluster, index) => (
               <tr key={`${cluster.clusterName}-${cluster.cityName}-${index}`} className="border-b border-gray-200 hover:bg-gray-50">
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{cluster.clusterName}</Typography>
+                  <TableBody>{cluster.clusterName}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{cluster.cityName}</Typography>
+                  <TableBody>{cluster.cityName}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{cluster.deaths}</Typography>
+                  <TableBody>{cluster.deaths}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{cluster.severeInjuries}</Typography>
+                  <TableBody>{cluster.severeInjuries}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{cluster.totalInjured}</Typography>
+                  <TableBody>{cluster.totalInjured}</TableBody>
                 </td>
                 <td className="p-3 text-right whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{cluster.totalInstitutions}</Typography>
+                  <TableBody>{cluster.totalInstitutions}</TableBody>
                 </td>
               </tr>
             ))}

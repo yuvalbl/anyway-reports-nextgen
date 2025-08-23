@@ -1,5 +1,5 @@
 import { type TransportationModeStats } from '../types'
-import { Typography } from './Typography'
+import { TableCaption, TableHeader, TableBody } from './Typography'
 
 const transportationData: TransportationModeStats[] = [
   {
@@ -34,9 +34,9 @@ export default function TransportationStats() {
     <div className="w-full mb-16">
       {/* Title */}
       <div className="rounded-t-lg p-4" style={{backgroundColor: '#E8F7FC'}}>
-        <Typography variant="table-caption" as="h3" className="text-center text-gray-800">
+        <TableCaption as="h3" className="text-center">
           נפגעים סביב מוסדות הלימוד – השוואה בין תקופות:
-        </Typography>
+        </TableCaption>
       </div>
 
       {/* Table */}
@@ -46,28 +46,28 @@ export default function TransportationStats() {
             {/* Column Headers */}
             <tr className="border-b border-gray-300" style={{backgroundColor: '#E8F7FC'}}>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">סה״כ נפגעים</Typography>
+                <TableHeader>סה״כ נפגעים</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">פצועים קל</Typography>
+                <TableHeader>פצועים קל</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">פצועים קשה</Typography>
+                <TableHeader>פצועים קשה</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">הרוגים</Typography>
+                <TableHeader>הרוגים</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">סה״כ נפגעים</Typography>
+                <TableHeader>סה״כ נפגעים</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">פצועים קל</Typography>
+                <TableHeader>פצועים קל</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">פצועים קשה</Typography>
+                <TableHeader>פצועים קשה</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-header" className="text-gray-700">הרוגים</Typography>
+                <TableHeader>הרוגים</TableHeader>
               </th>
               <th className="p-3 text-right">
               </th>
@@ -75,28 +75,28 @@ export default function TransportationStats() {
             {/* Period Labels */}
             <tr className="border-b border-gray-300" style={{backgroundColor: '#E8F7FC'}}>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-body" className="text-gray-600 font-semibold">2020-2025</Typography>
+                <TableBody className="text-gray-600 font-semibold">2020-2025</TableBody>
               </th>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-body" className="text-gray-600 font-semibold">2020-2025</Typography>
+                <TableBody className="text-gray-600 font-semibold">2020-2025</TableBody>
               </th>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-body" className="text-gray-600 font-semibold">2020-2025</Typography>
+                <TableBody className="text-gray-600 font-semibold">2020-2025</TableBody>
               </th>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-body" className="text-gray-600 font-semibold">2020-2025</Typography>
+                <TableBody className="text-gray-600 font-semibold">2020-2025</TableBody>
               </th>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-body" className="text-gray-600 font-semibold">2015-2020</Typography>
+                <TableBody className="text-gray-600 font-semibold">2015-2020</TableBody>
               </th>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-body" className="text-gray-600 font-semibold">2015-2020</Typography>
+                <TableBody className="text-gray-600 font-semibold">2015-2020</TableBody>
               </th>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-body" className="text-gray-600 font-semibold">2015-2020</Typography>
+                <TableBody className="text-gray-600 font-semibold">2015-2020</TableBody>
               </th>
               <th className="p-2 text-right border-r border-gray-300 whitespace-nowrap">
-                <Typography variant="table-body" className="text-gray-600 font-semibold">2015-2020</Typography>
+                <TableBody className="text-gray-600 font-semibold">2015-2020</TableBody>
               </th>
               <th className="p-2 text-right">
               </th>
@@ -107,37 +107,37 @@ export default function TransportationStats() {
               <tr key={mode.mode} className="border-b border-gray-200 hover:bg-gray-50">
                 {/* 2020-2025 Period (will appear on right in RTL) */}
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{mode.period2020_2025.totalInjured.toLocaleString()}</Typography>
+                  <TableBody>{mode.period2020_2025.totalInjured.toLocaleString()}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{mode.period2020_2025.lightInjuries.toLocaleString()}</Typography>
+                  <TableBody>{mode.period2020_2025.lightInjuries.toLocaleString()}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{mode.period2020_2025.severeInjuries}</Typography>
+                  <TableBody>{mode.period2020_2025.severeInjuries}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{mode.period2020_2025.deaths}</Typography>
+                  <TableBody>{mode.period2020_2025.deaths}</TableBody>
                 </td>
 
                 {/* 2015-2020 Period (will appear on left in RTL) */}
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{mode.period2015_2020.totalInjured.toLocaleString()}</Typography>
+                  <TableBody>{mode.period2015_2020.totalInjured.toLocaleString()}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{mode.period2015_2020.lightInjuries.toLocaleString()}</Typography>
+                  <TableBody>{mode.period2015_2020.lightInjuries.toLocaleString()}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{mode.period2015_2020.severeInjuries}</Typography>
+                  <TableBody>{mode.period2015_2020.severeInjuries}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <Typography variant="table-body" className="text-gray-800">{mode.period2015_2020.deaths}</Typography>
+                  <TableBody>{mode.period2015_2020.deaths}</TableBody>
                 </td>
 
                 {/* Mode Name */}
                 <td className="p-3 text-right whitespace-nowrap">
-                  <Typography variant="table-body" className={`${index === 0 ? 'font-semibold' : ''} text-gray-800`}>
+                  <TableBody className={`${index === 0 ? 'font-semibold' : ''}`}>
                     {mode.mode}
-                  </Typography>
+                  </TableBody>
                 </td>
               </tr>
             ))}

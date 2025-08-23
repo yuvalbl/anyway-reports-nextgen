@@ -36,7 +36,7 @@ export const VisionZero: React.FC = () => {
   )
 
   return (
-    <div className="bg-white rounded-xl p-4 sm:p-6 flex flex-col h-full">
+    <div className="rounded-lg border border-neutral-200/70">
       <div className="text-xl font-bold mb-6 text-center">
         דרכים לשיפור הבטיחות בדרכים על פי חזון אפס
       </div>
@@ -80,7 +80,7 @@ export const VisionZero: React.FC = () => {
           </div>
         </div>
         
-        <div className="flex-1 pr-4 overflow-y-auto">
+        <div className="flex-1 p-4 overflow-y-auto">
           {renderTabContent(VISION_ZERO_CONTENT[currentTab])}
         </div>
       </div>
