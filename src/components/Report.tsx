@@ -90,14 +90,6 @@ export const Report: React.FC<Props> = ({ schools, selectedId, setSelectedId, se
         <TransportationStats />
         <VisionZero />
       </div>
-
-      <div className={mainContentSpacing}>
-        <div className="mt-3">
-          <MainContent className="text-neutral-800">
-            credits
-          </MainContent>
-        </div>
-      </div>
     </div>
   )
 }

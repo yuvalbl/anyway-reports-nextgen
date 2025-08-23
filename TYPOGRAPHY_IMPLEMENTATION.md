@@ -1,7 +1,7 @@
 # Typography System Implementation
 
 ## Overview
-This document describes the comprehensive typography system implemented for the "בטיחות הילדים ליד בתי ספר" (Children's Safety Near Schools) report, based on the Figma design specifications.
+This document describes the comprehensive typography system implemented for the "בטיחות הילדים ליד מוסדות לימוד" (Children's Safety Near Schools) report, based on the Figma design specifications.
 
 ## Files Created/Modified
 

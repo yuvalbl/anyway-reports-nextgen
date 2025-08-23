@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Report } from './components/Report'
+import { Footer } from './components/Footer'
 import type { School } from './types'
 
 export const App: React.FC = () => {
@@ -21,17 +22,16 @@ export const App: React.FC = () => {
   )
 
   return (
-    <main>
+    <main className="pb-20 bg-white">
       <Header />
       <Hero />
-      <div className="bg-white">
-        <Report
-          schools={schools}
-          selectedId={selectedId}
-          setSelectedId={(id: number) => setSelectedId(id)}
-          selectedSchool={selectedSchool}
-        />
-      </div>
+      <Report
+        schools={schools}
+        selectedId={selectedId}
+        setSelectedId={(id: number) => setSelectedId(id)}
+        selectedSchool={selectedSchool}
+      />
+      <Footer />
     </main>
   )
 }
