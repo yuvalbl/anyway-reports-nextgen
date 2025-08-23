@@ -1,7 +1,7 @@
 import { type EducationalCluster } from '../types'
 import { TableCaption, TableHeader, TableBody } from './Typography'
 
-// Data from Figma design - Educational institution clusters
+// Data from PDF report - Educational institution clusters (top clusters by casualties in 1km² areas)
 const educationalClustersData: EducationalCluster[] = [
   { clusterName: 'מקבץ בית יעקב מרגלית', cityName: 'ירושלים', totalInstitutions: 52, totalInjured: 51, severeInjuries: 8, deaths: 1 },
   { clusterName: 'מקבץ ויזניץ', cityName: 'בני ברק', totalInstitutions: 56, totalInjured: 60, severeInjuries: 9, deaths: 1 },
@@ -12,7 +12,7 @@ const educationalClustersData: EducationalCluster[] = [
   { clusterName: 'מקבץ בי סמינר רמות שמסיאב', cityName: 'ירושלים', totalInstitutions: 55, totalInjured: 39, severeInjuries: 6, deaths: 1 },
   { clusterName: 'מקבץ ישיבת מאור ושמש ביתר', cityName: 'ביתר עילית', totalInstitutions: 35, totalInjured: 12, severeInjuries: 9, deaths: 1 },
   { clusterName: 'מקבץ שובו תל אביב', cityName: 'תל אביב יפו', totalInstitutions: 5, totalInjured: 39, severeInjuries: 5, deaths: 0 },
-  { clusterName: 'מקבץ שובו תל אביב', cityName: 'אשדוד', totalInstitutions: 5, totalInjured: 28, severeInjuries: 2, deaths: 1 },
+  { clusterName: 'מקבץ יסודי מע"ר', cityName: 'אשדוד', totalInstitutions: 5, totalInjured: 28, severeInjuries: 2, deaths: 1 },
 ]
 
 export default function EducationalClustersTable() {
@@ -21,7 +21,7 @@ export default function EducationalClustersTable() {
       {/* Title */}
       <div className="rounded-t-lg border border-gray-200 p-4" style={{backgroundColor: '#ECECEC'}}>
         <TableCaption as="h3" className="text-center">
-          20 היישובים בעלי הדירוג המשוקלל הגבוה ביותר בין 2025-2020:
+          מקבצים מובילים בציון המשוקלל בחמש השנים האחרונות (כל מקבץ בגודל 1 קמ"ר):
         </TableCaption>
       </div>
 

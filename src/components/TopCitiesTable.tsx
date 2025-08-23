@@ -1,7 +1,7 @@
 import { type CityRanking } from '../types'
 import { TableCaption, TableHeader, TableBody } from './Typography'
 
-// Data from Figma design - 20 cities with highest composite scores
+// Data from PDF report - 20 cities with highest composite scores
 const topCitiesData: CityRanking[] = [
   {
     rank: 1,
@@ -26,7 +26,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 3,
     cityName: 'בני ברק',
-    compositeScore: 20676,
+    compositeScore: 2149,
     totalAccidents: 305,
     totalInjured: 316,
     lightInjuries: 288,
@@ -36,7 +36,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 4,
     cityName: 'אשדוד',
-    compositeScore: 20676,
+    compositeScore: 1672,
     totalAccidents: 322,
     totalInjured: 342,
     lightInjuries: 324,
@@ -46,7 +46,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 5,
     cityName: 'פתח תקווה',
-    compositeScore: 20676,
+    compositeScore: 1111,
     totalAccidents: 249,
     totalInjured: 269,
     lightInjuries: 251,
@@ -56,7 +56,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 6,
     cityName: 'חיפה',
-    compositeScore: 20676,
+    compositeScore: 822,
     totalAccidents: 207,
     totalInjured: 215,
     lightInjuries: 201,
@@ -66,7 +66,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 7,
     cityName: 'נתניה',
-    compositeScore: 20676,
+    compositeScore: 658,
     totalAccidents: 222,
     totalInjured: 229,
     lightInjuries: 220,
@@ -76,7 +76,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 8,
     cityName: 'אשקלון',
-    compositeScore: 20676,
+    compositeScore: 625,
     totalAccidents: 198,
     totalInjured: 207,
     lightInjuries: 197,
@@ -86,7 +86,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 9,
     cityName: 'חולון',
-    compositeScore: 20676,
+    compositeScore: 560,
     totalAccidents: 169,
     totalInjured: 178,
     lightInjuries: 164,
@@ -96,7 +96,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 10,
     cityName: 'ראשון לציון',
-    compositeScore: 20676,
+    compositeScore: 543,
     totalAccidents: 158,
     totalInjured: 164,
     lightInjuries: 149,
@@ -106,7 +106,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 11,
     cityName: 'בית שמש',
-    compositeScore: 20676,
+    compositeScore: 467,
     totalAccidents: 87,
     totalInjured: 91,
     lightInjuries: 69,
@@ -116,7 +116,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 12,
     cityName: 'רחובות',
-    compositeScore: 20676,
+    compositeScore: 420,
     totalAccidents: 158,
     totalInjured: 166,
     lightInjuries: 155,
@@ -126,7 +126,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 13,
     cityName: 'רמלה',
-    compositeScore: 20676,
+    compositeScore: 388,
     totalAccidents: 106,
     totalInjured: 114,
     lightInjuries: 101,
@@ -136,7 +136,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 14,
     cityName: 'רמת גן',
-    compositeScore: 20676,
+    compositeScore: 369,
     totalAccidents: 107,
     totalInjured: 115,
     lightInjuries: 103,
@@ -146,7 +146,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 15,
     cityName: 'ביתר עילית',
-    compositeScore: 20676,
+    compositeScore: 301,
     totalAccidents: 63,
     totalInjured: 67,
     lightInjuries: 48,
@@ -156,7 +156,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 16,
     cityName: 'לוד',
-    compositeScore: 20676,
+    compositeScore: 299,
     totalAccidents: 109,
     totalInjured: 114,
     lightInjuries: 105,
@@ -166,7 +166,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 17,
     cityName: 'חדרה',
-    compositeScore: 20676,
+    compositeScore: 229,
     totalAccidents: 117,
     totalInjured: 124,
     lightInjuries: 116,
@@ -176,7 +176,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 18,
     cityName: 'בת ים',
-    compositeScore: 20676,
+    compositeScore: 202,
     totalAccidents: 145,
     totalInjured: 153,
     lightInjuries: 148,
@@ -186,7 +186,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 19,
     cityName: 'באר שבע',
-    compositeScore: 20676,
+    compositeScore: 183,
     totalAccidents: 123,
     totalInjured: 126,
     lightInjuries: 120,
@@ -196,7 +196,7 @@ const topCitiesData: CityRanking[] = [
   {
     rank: 20,
     cityName: 'עכו',
-    compositeScore: 20676,
+    compositeScore: 65,
     totalAccidents: 80,
     totalInjured: 84,
     lightInjuries: 81,

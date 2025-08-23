@@ -1,6 +1,7 @@
 import { type TransportationModeStats } from '../types'
 import { TableCaption, TableHeader, TableBody } from './Typography'
 
+// Data from PDF report - Transportation mode statistics comparing two periods
 const transportationData: TransportationModeStats[] = [
   {
     mode: 'הולכי רגל',
