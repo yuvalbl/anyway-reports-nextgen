@@ -18,7 +18,7 @@ export const ReportArticle: React.FC = () => {
         </MainContent>
 
         <MainContent className="text-neutral-800">
-          מתוך 6,260 הילדים שנפגעו בסביבת הגנים ומוסדות החינוך ברחבי הארץ בחמש השנים האחרונות, 449 נפצעו באורח קשה. 30 תלמידים נהרגו. אחד הנתונים המדאיגים ביותר הוא הזינוק בנפגעים שהשתמשו בקורקינט חשמלי &ndash; מ-114 בין השנים 2015 ל-2020 ל-628 בין 2025-2020, עלייה של יותר מפי חמש וחצי.
+          מתוך 6,260 הילדים שנפגעו בסביבת הגנים ומוסדות החינוך ברחבי הארץ בחמש השנים האחרונות, 449 נפצעו באורח קשה. 30 תלמידים נהרגו. אחד הנתונים המדאיגים ביותר הוא הזינוק בנפגעים שהשתמשו בקורקינט חשמלי &ndash; מ-114 בין השנים 2020-2015 ל-628 בין 2025-2020, עלייה של יותר מפי חמש וחצי.
         </MainContent>
 
         <MainContent className="text-neutral-800">
@@ -46,7 +46,7 @@ export const ReportArticle: React.FC = () => {
         </MainContent>
 
         <MainContent className="text-neutral-800">
-          המפה הבאה מציגה את ריכוזי מוסדות הלימודים שבראשית הטבלה ואת החלוקה לנפגעים (ניתן לחפש כל מוסד לימודים אחר <a href="#schoolSearch" className="text-blue-600 hover:text-blue-800 underline">בראשית הדף</a>) ובטבלאות מטה תוכלו לראות גם את השינוי בערים עצמן, ולהשוות בין <span className="whitespace-nowrap">2015-2020</span> ל-<span className="whitespace-nowrap">2020-2025</span>:
+          המפה הבאה מציגה את ריכוזי מוסדות הלימודים שבראשית הטבלה ואת החלוקה לנפגעים (ניתן לחפש כל מוסד לימודים אחר <a href="#schoolSearch" className="text-blue-600 hover:text-blue-800 underline">בראשית הדף</a>). בטבלאות מטה תוכלו לראות גם את השינוי בערים עצמן, ולהשוות בין <span className="whitespace-nowrap">2015-2020</span> ל-<span className="whitespace-nowrap">2020-2025</span>:
         </MainContent>
       </div>
     </div>
