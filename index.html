@@ -6,29 +6,91 @@
     <title>תאונות סביב מוסדות לימוד</title>
     <meta name="description" content="דו״ח תאונות סביב מוסדות חינוך" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="תאונות סביב מוסדות לימוד" />
     <meta property="og:description" content="דו״ח תאונות סביב מוסדות חינוך" />
-    <meta property="og:image" content="https://ynet-pic1.yit.co.il/picserver5/wcm_upload/2024/07/09/B1LH3j5DR/new_logo_gif_ynet.gif" />
+    <meta
+      property="og:image"
+      content="https://ynet-pic1.yit.co.il/picserver5/wcm_upload/2024/07/09/B1LH3j5DR/new_logo_gif_ynet.gif"
+    />
     <meta property="og:image:width" content="422" />
     <meta property="og:image:height" content="113" />
     <meta property="og:locale" content="he_IL" />
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="תאונות סביב מוסדות לימוד" />
     <meta name="twitter:description" content="דו״ח תאונות סביב מוסדות חינוך" />
-    <meta name="twitter:image" content="https://ynet-pic1.yit.co.il/picserver5/wcm_upload/2024/07/09/B1LH3j5DR/new_logo_gif_ynet.gif" />
+    <meta
+      name="twitter:image"
+      content="https://ynet-pic1.yit.co.il/picserver5/wcm_upload/2024/07/09/B1LH3j5DR/new_logo_gif_ynet.gif"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    
   </head>
   <body class="font-sans bg-neutral-50 text-neutral-900">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script defer>
+      // accessibility widget
+      document.addEventListener(
+        'load',
+        (function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0]
+          if (d.getElementById(id)) return
+          js = d.createElement(s)
+          js.id = id
+          js.src = 'https://widget.prod.equally.ai/equally-widget.min.js'
+          fjs.parentNode.insertBefore(js, fjs)
+          window.EquallyAI = {
+            openToolbox: () =>
+              window.addEventListener('equally-ai:ready', () => window.EquallyAI.openToolbox()),
+            showLauncher: () =>
+              window.addEventListener('equally-ai:ready', () => window.EquallyAI.showLauncher()),
+            hideLauncher: () =>
+              window.addEventListener('equally-ai:ready', () => window.EquallyAI.hideLauncher()),
+          }
+        })(document, 'script', 'equallyWidget')
+      )
+      !window.EQUALLY_AI_API_KEY &&
+        ((window.EQUALLY_AI_HIDE_LAUNCHER = true),
+        (window.EQUALLY_AI_API_KEY = '7gcy23wq2h56kv997zvb5rrun8gatcd3'),
+        (intervalId = setInterval(function () {
+          window.EquallyAi && (clearInterval(intervalId), (window.EquallyAi = new EquallyAi()))
+        }, 500)))
+    </script>
+
+    <script>
+      // chartbeat
+      ;(function () {
+        /** CONFIGURATION START **/
+        var _sf_async_config = (window._sf_async_config = window._sf_async_config || {})
+        _sf_async_config.uid = 20691
+        _sf_async_config.domain = 'ynet.co.il'
+        _sf_async_config.flickerControl = false
+        _sf_async_config.useCanonical = true
+        _sf_async_config.useCanonicalDomain = true
+        _sf_async_config.sections = 'projects'
+        _sf_async_config.authors = 'הדרכים המסוכנות בדרך לבית הספר שלכם'
+        /** CONFIGURATION END **/
+        function loadChartbeat() {
+          var e = document.createElement('script')
+          var n = document.getElementsByTagName('script')[0]
+          e.type = 'text/javascript'
+          e.async = true
+          e.src = '//static.chartbeat.com/js/chartbeat.js'
+          n.parentNode.insertBefore(e, n)
+        }
+        loadChartbeat()
+      })()
+    </script>
   </body>
 </html>
