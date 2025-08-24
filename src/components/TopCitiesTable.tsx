@@ -1,5 +1,6 @@
 import { type CityRanking } from '../types'
 import { TableCaption, TableHeader, TableBody } from './Typography'
+import HorizontalScrollIndicator from './HorizontalScrollIndicator'
 
 // Data from PDF report - 20 cities with highest composite scores
 const topCitiesData: CityRanking[] = [
@@ -306,6 +307,7 @@ export default function TopCitiesTable() {
           </tbody>
         </table>
       </div>
+      <HorizontalScrollIndicator />
     </div>
   )
 }

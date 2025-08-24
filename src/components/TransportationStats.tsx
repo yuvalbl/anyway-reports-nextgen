@@ -1,5 +1,6 @@
 import { type TransportationModeStats } from '../types'
 import { TableCaption, TableHeader, TableBody } from './Typography'
+import HorizontalScrollIndicator from './HorizontalScrollIndicator'
 
 // Data from PDF report - Transportation mode statistics comparing two periods
 const transportationData: TransportationModeStats[] = [
@@ -138,6 +139,7 @@ export default function TransportationStats() {
           </tbody>
         </table>
       </div>
+      <HorizontalScrollIndicator />
     </div>
   )
 }

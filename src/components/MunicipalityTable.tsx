@@ -1,5 +1,6 @@
 import { type MunicipalityComparison } from '../types'
 import { TableCaption, TableHeader, TableBody } from './Typography'
+import HorizontalScrollIndicator from './HorizontalScrollIndicator'
 
 // Data from Figma design - Municipality comparison between periods
 const improvementData: MunicipalityComparison[] = [
@@ -100,6 +101,7 @@ export default function MunicipalityTable() {
           </tbody>
         </table>
       </div>
+      <HorizontalScrollIndicator />
     </div>
   )
 }

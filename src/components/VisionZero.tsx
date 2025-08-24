@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { VISION_ZERO_CONTENT, type VisionZeroContent } from '../constants/visionZero'
 import { MainContent } from './Typography'
+import ScrollIndicator from './ScrollIndicator'
 
 export const VisionZero: React.FC = () => {
   const [currentTab, setCurrentTab] = useState(0)
@@ -61,6 +62,7 @@ export const VisionZero: React.FC = () => {
             </button>
           ))}
         </div>
+        <ScrollIndicator />
       </div>
 
       {/* Desktop: Vertical tabs */}

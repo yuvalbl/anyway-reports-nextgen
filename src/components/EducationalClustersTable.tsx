@@ -1,5 +1,6 @@
 import { type EducationalCluster } from '../types'
 import { TableCaption, TableHeader, TableBody } from './Typography'
+import HorizontalScrollIndicator from './HorizontalScrollIndicator'
 
 // Data from PDF report - Educational institution clusters (top clusters by casualties in 1km² areas)
 const educationalClustersData: EducationalCluster[] = [
@@ -76,6 +77,7 @@ export default function EducationalClustersTable() {
           </tbody>
         </table>
       </div>
+      <HorizontalScrollIndicator />
     </div>
   )
 }
