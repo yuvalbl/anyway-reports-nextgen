@@ -52,6 +52,15 @@ export const Hero: React.FC = () => {
             את שם המוסד החינוכי שלכם, גלו אותם במפה והצילו חיים
           </HeroSubtitle>
         </div>
+        
+        <div 
+          className="opacity-0 translate-y-8 animate-fade-in-up mx-auto mt-4"
+          style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}
+        >
+          <p className="text-lg font-semibold text-gray-600 tracking-wide">
+            תמר טרבלסי
+          </p>
+        </div>
       </div>
     </section>
   )
