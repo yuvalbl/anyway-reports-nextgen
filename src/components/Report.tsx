@@ -30,7 +30,7 @@ const FooterContent: React.FC = () => {
     <>
       <div className="w-full bg-white py-8">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="flex flex-row justify-center items-center gap-4 md:gap-8 mb-8">
             <div className="text-center">
               <a
                 href="https://www.natun-leshinuy.org.il"
@@ -38,7 +38,7 @@ const FooterContent: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
               >
-                <img src={natunLogo} alt="נתון לשינוי" className="h-12 md:h-16 w-auto mx-auto" />
+                <img src={natunLogo} alt="נתון לשינוי" className="h-10 md:h-12 lg:h-12 w-auto" />
               </a>
             </div>
 
@@ -49,7 +49,7 @@ const FooterContent: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
               >
-                <img src={haikuLogo} alt="Haiku" className="h-12 md:h-16 w-auto mx-auto" />
+                <img src={haikuLogo} alt="Haiku" className="h-10 md:h-12 lg:h-12 w-auto" />
               </a>
             </div>
 
@@ -60,7 +60,7 @@ const FooterContent: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
               >
-                <img src={orYarokLogo} alt="אור ירוק" className="h-12 md:h-16 w-auto mx-auto" />
+                <img src={orYarokLogo} alt="אור ירוק" className="h-10 md:h-12 lg:h-12 w-auto" />
               </a>
             </div>
           </div>
