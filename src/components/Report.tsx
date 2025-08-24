@@ -49,7 +49,7 @@ const FooterContent: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
               >
-                <img src={natunLogo} alt="נתון לשינוי" className="h-16 w-auto mx-auto" />
+                <img src={natunLogo} alt="נתון לשינוי" className="h-12 md:h-16 w-auto mx-auto" />
               </a>
             </div>
 
@@ -60,7 +60,7 @@ const FooterContent: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
               >
-                <img src={haikuLogo} alt="Haiku" className="h-16 w-auto mx-auto" />
+                <img src={haikuLogo} alt="Haiku" className="h-12 md:h-16 w-auto mx-auto" />
               </a>
             </div>
 
@@ -71,21 +71,11 @@ const FooterContent: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
               >
-                <img src={orYarokLogo} alt="אור ירוק" className="h-16 w-auto mx-auto" />
+                <img src={orYarokLogo} alt="אור ירוק" className="h-12 md:h-16 w-auto mx-auto" />
               </a>
             </div>
           </div>
 
-          <div className="text-base text-gray-600 pt-4 border-t border-gray-200">
-            <p className="text-center">
-              תודה מיוחדת ל
-              <br />
-              <span className="font-medium text-gray-700">נתון לשינוי:</span> גל רייך, עתליה אלון,
-              אירה
-              <br />
-              <span className="font-medium text-gray-700">הייקו - פיתוח והטמעה:</span> יובל בר לוי
-            </p>
-          </div>
         </div>
       </div>
     </>

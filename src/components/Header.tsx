@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
           <img 
             src={ynetLogo} 
             alt="Ynet" 
-            className="h-11 w-auto"
+            className="h-8 md:h-11 w-auto"
           />
         </div>
 
