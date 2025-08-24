@@ -10,6 +10,9 @@ import TransportationStats from './TransportationStats'
 import EducationalClustersTable from './EducationalClustersTable'
 import { ReportArticle } from './ReportArticle'
 import { MapEmbed } from './MapEmbed'
+import natunLogo from '../assets/natun_leshinuy_logo.png'
+import haikuLogo from '../assets/haiku_logo.svg'
+import orYarokLogo from '../assets/or_yarok_logo.avif'
 import type { School, InjuredYearRecord, MonthlyRecord, SexRecord } from '../types'
 
 const containerSpacing = 'px-4 sm:p-6'
@@ -20,6 +23,73 @@ type Props = {
   selectedId: number | null
   setSelectedId: (id: number) => void
   selectedSchool: School | null
+}
+
+const FooterContent: React.FC = () => {
+  return (
+    <>
+      <div className="w-full bg-white py-8">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">אודות הפרויקט</h2>
+
+          <div className="space-y-4 text-lg leading-relaxed mb-8">
+            <p>
+              מערכת מידע אינטרקטיבית המחברת בין נתוני בטיחות בדרכים לבין מיקומי מוסדות חינוך בישראל,
+              כדי לחשוף סיכונים ולקדם שיפור הבטיחות עבור ילדינו. מטרת הפרויקט הינה קידום תשתיות
+              חכמות המצילות חיים באזורים מסוכנים על פי המידע הנאסף בישראל על תאונות דרכים.
+            </p>
+            <p>הדו״ח מתבסס על נתוני הלשכה המרכזית לסטטיסטיקה.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="text-center">
+              <a
+                href="https://www.natun-leshinuy.org.il"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-80 transition-opacity duration-200"
+              >
+                <img src={natunLogo} alt="נתון לשינוי" className="h-16 w-auto mx-auto" />
+              </a>
+            </div>
+
+            <div className="text-center">
+              <a
+                href="https://haiku.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-80 transition-opacity duration-200"
+              >
+                <img src={haikuLogo} alt="Haiku" className="h-16 w-auto mx-auto" />
+              </a>
+            </div>
+
+            <div className="text-center">
+              <a
+                href="https://www.oryarok.org.il"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-80 transition-opacity duration-200"
+              >
+                <img src={orYarokLogo} alt="אור ירוק" className="h-16 w-auto mx-auto" />
+              </a>
+            </div>
+          </div>
+
+          <div className="text-base text-gray-600 pt-4 border-t border-gray-200">
+            <p className="text-center">
+              תודה מיוחדת ל
+              <br />
+              <span className="font-medium text-gray-700">נתון לשינוי:</span> גל רייך, עתליה אלון,
+              אירה
+              <br />
+              <span className="font-medium text-gray-700">הייקו - פיתוח והטמעה:</span> יובל בר לוי
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
 
 export const Report: React.FC<Props> = ({ schools, selectedId, setSelectedId, selectedSchool }) => {
@@ -58,9 +128,7 @@ export const Report: React.FC<Props> = ({ schools, selectedId, setSelectedId, se
           <div className="w-full flex justify-center mb-16">
             <div className="w-full max-w-2xl">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                  חפש מוסד חינוך
-                </h2>
+                <h2 className="text-3xl font-bold text-gray-800 my-4">חפש מוסד חינוך:</h2>
               </div>
               <SchoolSelect schools={schools} onSelectId={setSelectedId} />
             </div>
@@ -105,6 +173,8 @@ export const Report: React.FC<Props> = ({ schools, selectedId, setSelectedId, se
         <TransportationStats />
         <VisionZero />
       </div>
+
+      <FooterContent />
     </div>
   )
 }

@@ -50,13 +50,13 @@ export default function TransportationStats() {
                 <TableHeader>אמצעי תחבורה</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap" colSpan={2}>
-                <TableHeader>פצועים קל</TableHeader>
+                <TableHeader>הרוגים</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap" colSpan={2}>
                 <TableHeader>פצועים קשה</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap" colSpan={2}>
-                <TableHeader>הרוגים</TableHeader>
+                <TableHeader>פצועים קל</TableHeader>
               </th>
               <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap" colSpan={2}>
                 <TableHeader>סה״כ נפגעים</TableHeader>
@@ -102,12 +102,12 @@ export default function TransportationStats() {
                   </TableBody>
                 </td>
 
-                {/* Lightly Injured */}
+                {/* Killed */}
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{mode.period2020_2025.lightInjuries.toLocaleString()}</TableBody>
+                  <TableBody>{mode.period2020_2025.deaths}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{mode.period2015_2020.lightInjuries.toLocaleString()}</TableBody>
+                  <TableBody>{mode.period2015_2020.deaths}</TableBody>
                 </td>
 
                 {/* Severely Injured */}
@@ -118,12 +118,12 @@ export default function TransportationStats() {
                   <TableBody>{mode.period2015_2020.severeInjuries}</TableBody>
                 </td>
 
-                {/* Killed */}
+                {/* Lightly Injured */}
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{mode.period2020_2025.deaths}</TableBody>
+                  <TableBody>{mode.period2020_2025.lightInjuries.toLocaleString()}</TableBody>
                 </td>
                 <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{mode.period2015_2020.deaths}</TableBody>
+                  <TableBody>{mode.period2015_2020.lightInjuries.toLocaleString()}</TableBody>
                 </td>
 
                 {/* Total Injured - now last */}

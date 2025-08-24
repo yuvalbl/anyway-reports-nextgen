@@ -82,17 +82,10 @@ export const SchoolSelect: React.FC<Props> = ({ schools, onSelectId }) => {
   return (
     <div className="relative group">
       <Combobox value={selected} onChange={handleSelect} nullable>
-        <div className="relative" id="schoolSearch">
-          <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-300 transition-all duration-500 ease-out ${
-            isFocused || query ? 'w-full' : 'w-0 group-hover:w-1/3'
-          }`}></div>
-          
-          <div className={`absolute inset-0 bg-gradient-to-r from-slate-50 to-gray-50 rounded-lg transition-all duration-300 ${
-            isFocused ? 'opacity-100 scale-105' : 'opacity-0 scale-100 group-hover:opacity-50'
-          }`}></div>
+        <div className="relative border-2 border-gray-200 rounded-xl transition-all duration-300 hover:border-gray-300 focus-within:border-blue-400 bg-white" id="schoolSearch">
 
           <div className={`absolute right-4 top-1/2 transform -translate-y-1/2 transition-all duration-300 ${
-            isFocused || query ? 'text-blue-500 scale-110' : 'text-gray-400 group-hover:text-gray-600'
+            isFocused || query ? 'text-blue-500' : 'text-gray-400 group-hover:text-gray-600'
           }`}>
             {isTyping ? (
               <div className="w-5 h-5">
@@ -115,11 +108,7 @@ export const SchoolSelect: React.FC<Props> = ({ schools, onSelectId }) => {
             onBlur={() => setIsFocused(false)}
           />
 
-          {(isFocused || query) && (
-            <div className="absolute -top-2 right-4 bg-white px-2 text-xs font-medium text-blue-500 transition-all duration-300 animate-fadeInUp">
-              חיפוש מוסד חינוך
-            </div>
-          )}
+
         </div>
 
         {suggestions.length > 0 && (
