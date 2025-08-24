@@ -34,7 +34,7 @@ export default function MunicipalityTable() {
     <div className="w-full mb-16">
       {/* Title */}
       <div className="rounded-t-lg border border-gray-200 p-4" style={{backgroundColor: '#ECECEC'}}>
-        <TableCaption as="h3" className="text-center">
+        <TableCaption className="text-center">
           היישובים בהם הייתה מגמה שלילית/חיובית בין שתי התקופות:
         </TableCaption>
       </div>

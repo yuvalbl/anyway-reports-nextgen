@@ -211,7 +211,7 @@ export default function TopCitiesTable() {
     <div className="w-full mb-16">
       {/* Title */}
       <div className="rounded-t-lg border border-gray-200 p-4" style={{backgroundColor: '#E8F7FC'}}>
-        <TableCaption as="h3" className="text-center">
+        <TableCaption className="text-center">
           20 היישובים בעלי הדירוג המשוקלל הגבוה ביותר בין 2025-2020:
         </TableCaption>
       </div>

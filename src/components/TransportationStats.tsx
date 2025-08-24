@@ -36,7 +36,7 @@ export default function TransportationStats() {
     <div className="w-full mb-16">
       {/* Title */}
       <div className="rounded-t-lg border border-gray-200 p-4" style={{backgroundColor: '#E8F7FC'}}>
-        <TableCaption as="h3" className="text-center">
+        <TableCaption className="text-center">
           נפגעים סביב מוסדות הלימוד – השוואה בין תקופות:
         </TableCaption>
       </div>

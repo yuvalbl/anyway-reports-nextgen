@@ -82,7 +82,7 @@ export const TableBody: React.FC<{ children: React.ReactNode; className?: string
 )
 
 export const TableCaption: React.FC<{ children: React.ReactNode; className?: string }> = ({ className, ...props }) => (
-  <Typography variant="table-caption" as="caption" className={cn("text-gray-800", className)} {...props} />
+  <Typography variant="table-caption" as="h3" className={cn("text-gray-800", className)} {...props} />
 )
 
 export default Typography 
