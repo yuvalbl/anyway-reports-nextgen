@@ -30,17 +30,6 @@ const FooterContent: React.FC = () => {
     <>
       <div className="w-full bg-white py-8">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">אודות הפרויקט</h2>
-
-          <div className="space-y-4 text-lg leading-relaxed mb-8">
-            <p>
-              מערכת מידע אינטרקטיבית המחברת בין נתוני בטיחות בדרכים לבין מיקומי מוסדות חינוך בישראל,
-              כדי לחשוף סיכונים ולקדם שיפור הבטיחות עבור ילדינו. מטרת הפרויקט הינה קידום תשתיות
-              חכמות המצילות חיים באזורים מסוכנים על פי המידע הנאסף בישראל על תאונות דרכים.
-            </p>
-            <p>הדו״ח מתבסס על נתוני הלשכה המרכזית לסטטיסטיקה.</p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <a
