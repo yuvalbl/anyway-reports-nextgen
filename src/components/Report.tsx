@@ -160,8 +160,8 @@ export const Report: React.FC<Props> = ({ schools, selectedId, setSelectedId, se
       </div>
 
       <div className={mainContentSpacing}>
-        <MunicipalityTable />
         <TopCitiesTable />
+        <MunicipalityTable />
         <EducationalClustersTable />
         <TransportationStats />
         <VisionZero />
