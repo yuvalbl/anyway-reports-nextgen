@@ -22,7 +22,7 @@ export default function EducationalClustersTable() {
       {/* Title */}
       <div className="rounded-t-lg border border-gray-200 p-4" style={{backgroundColor: '#ECECEC'}}>
         <TableCaption as="h3" className="text-center">
-          מקבצים מובילים בציון המשוקלל בחמש השנים האחרונות (כל מקבץ בגודל 1 קמ"ר):
+          מקבצים מובילים בציון המשוקלל בחמש השנים האחרונות (כל מקבץ בגודל 1 קמ&sup2;):
         </TableCaption>
       </div>
 
@@ -31,47 +31,47 @@ export default function EducationalClustersTable() {
         <table className="w-full min-w-[800px]">
           <thead>
             <tr className="border-b border-gray-300" style={{backgroundColor: '#ECECEC'}}>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>המקבץ</TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>ישוב</TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>סה״כ הרוגים במקבץ</TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>סה״כ פצועים קשה במקבץ</TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>סה״כ נפגעים במקבץ</TableHeader>
-              </th>
-              <th className="p-3 text-right whitespace-nowrap">
-                <TableHeader>סה״כ מוסדות לימוד במקבץ</TableHeader>
-              </th>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                המקבץ
+              </TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                ישוב
+              </TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                סה״כ הרוגים במקבץ
+              </TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                סה״כ פצועים קשה במקבץ
+              </TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                סה״כ נפגעים במקבץ
+              </TableHeader>
+              <TableHeader className="p-3 text-right whitespace-nowrap">
+                סה״כ מוסדות לימוד במקבץ
+              </TableHeader>
             </tr>
           </thead>
           <tbody>
             {educationalClustersData.map((cluster, index) => (
               <tr key={`${cluster.clusterName}-${cluster.cityName}-${index}`} className="border-b border-gray-200 hover:bg-gray-50">
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{cluster.clusterName}</TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{cluster.cityName}</TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{cluster.deaths}</TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{cluster.severeInjuries}</TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>{cluster.totalInjured}</TableBody>
-                </td>
-                <td className="p-3 text-right whitespace-nowrap">
-                  <TableBody>{cluster.totalInstitutions}</TableBody>
-                </td>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  {cluster.clusterName}
+                </TableBody>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  {cluster.cityName}
+                </TableBody>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  {cluster.deaths}
+                </TableBody>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  {cluster.severeInjuries}
+                </TableBody>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  {cluster.totalInjured}
+                </TableBody>
+                <TableBody className="p-3 text-right whitespace-nowrap">
+                  {cluster.totalInstitutions}
+                </TableBody>
               </tr>
             ))}
           </tbody>

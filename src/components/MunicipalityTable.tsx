@@ -35,7 +35,7 @@ export default function MunicipalityTable() {
       {/* Title */}
       <div className="rounded-t-lg border border-gray-200 p-4" style={{backgroundColor: '#ECECEC'}}>
         <TableCaption as="h3" className="text-center">
-          הישובים בהם הייתה מגמה שלילית/חיובית בין שתי התקופות:
+          היישובים בהם הייתה מגמה שלילית/חיובית בין שתי התקופות:
         </TableCaption>
       </div>
 
@@ -45,26 +45,26 @@ export default function MunicipalityTable() {
           {/* Header */}
           <thead>
             <tr className="border-b border-gray-200">
-              <th colSpan={2} className="p-3 text-center whitespace-nowrap" style={{backgroundColor: '#ECECEC'}}>
-                <TableHeader>החמרה</TableHeader>
-              </th>
-              <th colSpan={2} className="p-3 text-center whitespace-nowrap" style={{backgroundColor: '#ECECEC'}}>
-                <TableHeader>שיפור</TableHeader>
-              </th>
+              <TableHeader colSpan={2} className="p-3 text-center whitespace-nowrap" style={{backgroundColor: '#ECECEC'}}>
+                החמרה
+              </TableHeader>
+              <TableHeader colSpan={2} className="p-3 text-center whitespace-nowrap" style={{backgroundColor: '#ECECEC'}}>
+                שיפור
+              </TableHeader>
             </tr>
             <tr className="border-b border-gray-300" style={{backgroundColor: '#ECECEC'}}>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>ישוב</TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>% שינוי</TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>ישוב</TableHeader>
-              </th>
-              <th className="p-3 text-right whitespace-nowrap">
-                <TableHeader>% שינוי</TableHeader>
-              </th>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                ישוב
+              </TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                % שינוי
+              </TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                ישוב
+              </TableHeader>
+              <TableHeader className="p-3 text-right whitespace-nowrap">
+                % שינוי
+              </TableHeader>
             </tr>
           </thead>
           <tbody>
@@ -75,26 +75,24 @@ export default function MunicipalityTable() {
               return (
                 <tr key={rowIndex} className="border-b border-gray-200 hover:bg-gray-50">
                   {/* First columns - Worsening (will appear on right in RTL) */}
-                  <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                    <TableBody>{worseningItem?.cityName || ''}</TableBody>
-                  </td>
-                  <td className="p-3 text-right border-r border-gray-300 bg-red-50 whitespace-nowrap">
-                    <TableBody>{worseningItem?.percentChange || ''}</TableBody>
-                  </td>
+                  <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                    {worseningItem?.cityName || ''}
+                  </TableBody>
+                  <TableBody className="p-3 text-right border-r border-gray-300 bg-red-50 whitespace-nowrap">
+                    {worseningItem?.percentChange || ''}
+                  </TableBody>
                   
                   {/* Last columns - Improvement (will appear on left in RTL) */}
-                  <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                    <TableBody>{improvementItem?.cityName || ''}</TableBody>
-                  </td>
-                  <td className="p-3 text-right bg-green-50 whitespace-nowrap">
-                    <TableBody>
-                      {improvementItem?.percentChange ? 
-                        improvementItem.percentChange.toString().startsWith('-') ? 
-                          improvementItem.percentChange.toString().substring(1) + '-' : 
-                          improvementItem.percentChange 
-                        : ''}
-                    </TableBody>
-                  </td>
+                  <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                    {improvementItem?.cityName || ''}
+                  </TableBody>
+                  <TableBody className="p-3 text-right bg-green-50 whitespace-nowrap">
+                    {improvementItem?.percentChange ? 
+                      improvementItem.percentChange.toString().startsWith('-') ? 
+                        improvementItem.percentChange.toString().substring(1) + '-' : 
+                        improvementItem.percentChange 
+                      : ''}
+                  </TableBody>
                 </tr>
               )
             })}

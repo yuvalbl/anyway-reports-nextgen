@@ -6,6 +6,7 @@ export interface TypographyProps {
   children: React.ReactNode
   className?: string
   as?: React.ElementType
+  [key: string]: any
 }
 
 export const Typography: React.FC<TypographyProps> = ({
@@ -60,27 +61,27 @@ export const Typography: React.FC<TypographyProps> = ({
 }
 
 // Specific typography components for easier use
-export const HeroTitle: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = (props) => (
+export const HeroTitle: React.FC<{ children: React.ReactNode; className?: string }> = (props) => (
   <Typography variant="hero-title" as="h1" {...props} />
 )
 
-export const HeroSubtitle: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = (props) => (
+export const HeroSubtitle: React.FC<{ children: React.ReactNode; className?: string }> = (props) => (
   <Typography variant="hero-subtitle" as="p" {...props} />
 )
 
-export const MainContent: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = (props) => (
+export const MainContent: React.FC<{ children: React.ReactNode; className?: string }> = (props) => (
   <Typography variant="main-content" as="p" {...props} />
 )
 
-export const TableHeader: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = ({ className, ...props }) => (
+export const TableHeader: React.FC<{ children: React.ReactNode; className?: string } & React.ThHTMLAttributes<HTMLTableHeaderCellElement>> = ({ className, ...props }) => (
   <Typography variant="table-header" as="th" className={cn("text-gray-700", className)} {...props} />
 )
 
-export const TableBody: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = ({ className, ...props }) => (
+export const TableBody: React.FC<{ children: React.ReactNode; className?: string } & React.TdHTMLAttributes<HTMLTableDataCellElement>> = ({ className, ...props }) => (
   <Typography variant="table-body" as="td" className={cn("text-gray-800", className)} {...props} />
 )
 
-export const TableCaption: React.FC<{ children: React.ReactNode; className?: string; as?: React.ElementType }> = ({ className, ...props }) => (
+export const TableCaption: React.FC<{ children: React.ReactNode; className?: string }> = ({ className, ...props }) => (
   <Typography variant="table-caption" as="caption" className={cn("text-gray-800", className)} {...props} />
 )
 

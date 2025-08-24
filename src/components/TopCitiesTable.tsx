@@ -221,87 +221,57 @@ export default function TopCitiesTable() {
         <table className="w-full min-w-[800px]">
           <thead>
             <tr className="border-b border-gray-300" style={{backgroundColor: '#E8F7FC'}}>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap"></th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>
-                  ישוב
-                </TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>
-                  הרוגים
-                </TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>
-                  פצועים קשה
-                </TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>
-                  פצועים קל
-                </TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>
-                  סה״כ נפגעים
-                </TableHeader>
-              </th>
-              <th className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                <TableHeader>
-                  סה״כ תאונות
-                </TableHeader>
-              </th>
-              <th className="p-3 text-right whitespace-nowrap">
-                <TableHeader>
-                  ציון משוקלל
-                </TableHeader>
-              </th>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">#</TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                ישוב
+              </TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                הרוגים
+              </TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                פצועים קשה
+              </TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                פצועים קל
+              </TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                סה״כ נפגעים
+              </TableHeader>
+              <TableHeader className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                סה״כ תאונות
+              </TableHeader>
+              <TableHeader className="p-3 text-right whitespace-nowrap">
+                ציון משוקלל
+              </TableHeader>
             </tr>
           </thead>
           <tbody>
             {topCitiesData.map((city) => (
               <tr key={city.rank} className="border-b border-gray-200 hover:bg-gray-50">
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody className="font-semibold">
-                    {city.rank}
-                  </TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>
-                    {city.cityName}
-                  </TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>
-                    {city.deaths}
-                  </TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>
-                    {city.severeInjuries}
-                  </TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>
-                    {city.lightInjuries}
-                  </TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>
-                    {city.totalInjured}
-                  </TableBody>
-                </td>
-                <td className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  <TableBody>
-                    {city.totalAccidents}
-                  </TableBody>
-                </td>
-                <td className="p-3 text-right whitespace-nowrap">
-                  <TableBody>
-                    {city.compositeScore.toLocaleString()}
-                  </TableBody>
-                </td>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap font-semibold">
+                  {city.rank}
+                </TableBody>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  {city.cityName}
+                </TableBody>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  {city.deaths}
+                </TableBody>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  {city.severeInjuries}
+                </TableBody>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  {city.lightInjuries}
+                </TableBody>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  {city.totalInjured}
+                </TableBody>
+                <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
+                  {city.totalAccidents}
+                </TableBody>
+                <TableBody className="p-3 text-right whitespace-nowrap">
+                  {city.compositeScore.toLocaleString()}
+                </TableBody>
               </tr>
             ))}
           </tbody>
