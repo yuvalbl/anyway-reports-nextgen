@@ -41,7 +41,7 @@ const FooterContent: React.FC = () => {
           <div className="flex flex-row justify-center items-center gap-3 sm:gap-4 md:gap-8 mb-8">
             <div className="text-center">
               <a
-                href="https://www.natun-leshinuy.org.il"
+                href="https://www.natun.co.il"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
