@@ -30,7 +30,15 @@ const FooterContent: React.FC = () => {
     <>
       <div className="w-full bg-white py-8">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="flex flex-row justify-center items-center gap-4 md:gap-8 mb-8">
+          <div className="text-center mb-8">
+            <h3 className="text-lg font-semibold text-gray-700 mb-4">תודה מיוחדת:</h3>
+            <div className="text-sm text-gray-600 space-y-1">
+              <p>כתבה: תמר טרבלסי</p>
+              <p>פיתוח והטמעה: יובל בר לוי</p>
+              <p>עריכת הדו״ח: גל רייך ועתליה אלון</p>
+            </div>
+          </div>
+          <div className="flex flex-row justify-center items-center gap-3 sm:gap-4 md:gap-8 mb-8">
             <div className="text-center">
               <a
                 href="https://www.natun-leshinuy.org.il"
@@ -38,7 +46,7 @@ const FooterContent: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
               >
-                <img src={natunLogo} alt="נתון לשינוי" className="h-10 md:h-12 lg:h-12 w-auto" />
+                <img src={natunLogo} alt="נתון לשינוי" className="h-8 w-auto sm:h-10 md:h-12 lg:h-12 object-contain" />
               </a>
             </div>
 
@@ -49,7 +57,7 @@ const FooterContent: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
               >
-                <img src={haikuLogo} alt="Haiku" className="h-10 md:h-12 lg:h-12 w-auto" />
+                <img src={haikuLogo} alt="Haiku" className="h-8 w-auto sm:h-10 md:h-12 lg:h-12 object-contain" />
               </a>
             </div>
 
@@ -60,7 +68,7 @@ const FooterContent: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
               >
-                <img src={orYarokLogo} alt="אור ירוק" className="h-10 md:h-12 lg:h-12 w-auto" />
+                <img src={orYarokLogo} alt="אור ירוק" className="h-8 w-auto sm:h-10 md:h-12 lg:h-12 object-contain" />
               </a>
             </div>
           </div>
