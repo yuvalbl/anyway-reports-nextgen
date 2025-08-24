@@ -101,7 +101,7 @@ export const SchoolSelect: React.FC<Props> = ({ schools, onSelectId }) => {
           <Combobox.Input
             ref={inputRef}
             className={`relative w-full bg-transparent transition-all duration-300 focus:placeholder-gray-300 outline-none text-lg text-gray-800 placeholder-gray-400 py-4 z-10 pr-12 pl-4`}
-            placeholder="הקלד שם בית ספר או עיר..."
+            placeholder="הקלד שם מוסד לימודים"
             value={query}
             onChange={handleInputChange}
             onFocus={() => setIsFocused(true)}
