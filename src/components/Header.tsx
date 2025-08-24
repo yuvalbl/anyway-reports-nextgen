@@ -16,6 +16,16 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const getShareData = () => {
+    const title = 'הכבישים המסוכנים בדרך לבית הספר שלכם - ynet'
+    const description = 'חפשו במפה וגלו: פרויקט מיוחד חושף את רמת הסיכון בכל הדרכים הסמוכות למוסדות חינוכיים בישראל'
+    const currentUrl = window.location.origin + window.location.pathname
+    
+    return { title, description, currentUrl }
+  }
+
+  const { title, description, currentUrl } = getShareData()
+
   return (
     <header className={`w-full bg-white sticky top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'shadow-md' : ''
@@ -42,7 +52,7 @@ export const Header: React.FC = () => {
 
         <div className="flex items-center gap-6">
           <a 
-            href="mailto:?subject=Check%20out%20this%20Ynet%20report&body=I%20thought%20you%20might%20be%20interested%20in%20this%20report%20from%20Ynet"
+            href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(description + '\n\n' + currentUrl)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-6 h-6 flex items-center justify-center hover:opacity-80 transition-opacity duration-200"
@@ -56,7 +66,7 @@ export const Header: React.FC = () => {
           </a>
 
           <a 
-            href="https://api.whatsapp.com/send?text=Check%20out%20this%20report%20from%20Ynet"
+            href={`https://api.whatsapp.com/send?text=${encodeURIComponent(title + '\n\n' + description + '\n\n' + currentUrl)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-6 h-6 flex items-center justify-center hover:opacity-80 transition-opacity duration-200"
@@ -68,8 +78,6 @@ export const Header: React.FC = () => {
               style={{ color: '#3E3232' }}
             />
           </a>
-
-
 
           <a 
             href="https://twitter.com/ynet"
