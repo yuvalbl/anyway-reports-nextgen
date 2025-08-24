@@ -29,13 +29,19 @@ const FooterContent: React.FC = () => {
   return (
     <>
       <div className="w-full bg-white py-8">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-8">
             <h3 className="text-lg font-semibold text-gray-700 mb-4">תודה מיוחדת:</h3>
-            <div className="text-sm text-gray-600 space-y-1">
-              <p>כתבה: תמר טרבלסי</p>
-              <p>פיתוח והטמעה: יובל בר לוי</p>
-              <p>עריכת הדו״ח: גל רייך ועתליה אלון</p>
+            <div className="text-sm text-gray-600">
+              <div className="flex flex-wrap justify-center gap-x-2 gap-y-1">
+                <span>פיתוח והטמעה: <strong>יובל בר לוי</strong></span>
+                <span>|</span>
+                <span>עריכת הדו״ח: <strong>גל רייך</strong> ו<strong>עתליה אלון</strong></span>
+                <span className="hidden sm:inline">|</span>
+                <span>עורך: <strong>אופיר שמיר</strong></span>
+                <span>|</span>
+                <span>ניהול פרויקט: <strong>ראיין קורנל</strong></span>
+              </div>
             </div>
           </div>
           <div className="flex flex-row justify-center items-center gap-3 sm:gap-4 md:gap-8 mb-8">
