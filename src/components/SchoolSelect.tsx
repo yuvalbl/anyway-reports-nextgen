@@ -20,8 +20,20 @@ export const SchoolSelect: React.FC<Props> = ({ schools, onSelectId }) => {
   const [selected, setSelected] = useState<Suggestion | null>(null)
   const [isFocused, setIsFocused] = useState(false)
   const [isTyping, setIsTyping] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
   const typingTimeoutRef = useRef<number | undefined>(undefined)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const data: Suggestion[] = useMemo(() => {
     return schools.map((school) => {
@@ -71,6 +83,24 @@ export const SchoolSelect: React.FC<Props> = ({ schools, onSelectId }) => {
     }, 500)
   }
 
+  const handleFocus = () => {
+    setIsFocused(true)
+    
+    // On mobile, scroll the searchbox to the top of the viewport for better UX
+    if (isMobile) {
+      setTimeout(() => {
+        const searchboxElement = document.getElementById('schoolSearch')
+        if (searchboxElement) {
+          searchboxElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          })
+        }
+      }, 100)
+    }
+  }
+
   useEffect(() => {
     return () => {
       if (typingTimeoutRef.current) {
@@ -82,7 +112,9 @@ export const SchoolSelect: React.FC<Props> = ({ schools, onSelectId }) => {
   return (
     <div className="relative group">
       <Combobox value={selected} onChange={handleSelect} nullable>
-        <div className="relative border-2 border-gray-200 rounded-xl transition-all duration-300 hover:border-gray-300 focus-within:border-blue-400 bg-white" id="schoolSearch">
+        <div className={`relative border-2 border-gray-200 rounded-xl transition-all duration-300 hover:border-gray-300 focus-within:border-blue-400 bg-white ${
+          isFocused && isMobile ? 'mobile-focused' : ''
+        }`} id="schoolSearch">
 
           <div className={`absolute right-4 top-1/2 transform -translate-y-1/2 transition-all duration-300 ${
             isFocused || query ? 'text-blue-500' : 'text-gray-400 group-hover:text-gray-600'
@@ -104,7 +136,7 @@ export const SchoolSelect: React.FC<Props> = ({ schools, onSelectId }) => {
             placeholder="הקלד שם מוסד לימודים"
             value={query}
             onChange={handleInputChange}
-            onFocus={() => setIsFocused(true)}
+            onFocus={handleFocus}
             onBlur={() => setIsFocused(false)}
           />
 
@@ -193,6 +225,20 @@ export const SchoolSelect: React.FC<Props> = ({ schools, onSelectId }) => {
         
         .animate-slideInRight {
           animation: slideInRight 0.3s ease-out;
+        }
+        
+        /* Mobile focus positioning */
+        @media (max-width: 767px) {
+          .mobile-focused {
+            position: relative;
+            z-index: 1000;
+            scroll-margin-top: 2rem;
+          }
+          
+          /* Ensure the searchbox container is visible at the top */
+          .mobile-focused:focus-within {
+            scroll-margin-top: 2rem;
+          }
         }
       `}</style>
     </div>
