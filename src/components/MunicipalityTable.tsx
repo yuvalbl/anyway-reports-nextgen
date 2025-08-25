@@ -8,9 +8,10 @@ const improvementData: MunicipalityComparison[] = [
   { cityName: 'ירושלים', percentChange: -12, totalAccidents: 136, trend: 'improvement' },
   { cityName: 'בת ים', percentChange: -21, totalAccidents: 109, trend: 'improvement' },
   { cityName: 'תל אביב יפו', percentChange: -24, totalAccidents: 98, trend: 'improvement' },
-  { cityName: 'עכו', percentChange: -33, totalAccidents: 92, trend: 'improvement' },
+
   { cityName: 'לוד', percentChange: -34, totalAccidents: 53, trend: 'improvement' },
   { cityName: 'חיפה', percentChange: -48, totalAccidents: 46, trend: 'improvement' },
+  { cityName: 'מודיעין עילית', percentChange: -52, totalAccidents: 35, trend: 'improvement' },
   { cityName: 'ראשון לציון', percentChange: -54, totalAccidents: 26, trend: 'improvement' },
   { cityName: 'באר שבע', percentChange: -64, totalAccidents: 16, trend: 'improvement' },
 ]

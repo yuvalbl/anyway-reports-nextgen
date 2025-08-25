@@ -80,14 +80,14 @@ export const Header: React.FC = () => {
           </a>
 
           <a 
-            href="https://twitter.com/ynet"
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title + '\n\n' + description + '\n\n' + currentUrl)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-6 h-6 flex items-center justify-center hover:opacity-80 transition-opacity duration-200"
           >
             <img 
               src={xIcon} 
-              alt="Follow on X (Twitter)" 
+              alt="Share on X (Twitter)" 
               className="w-6 h-6"
               style={{ color: '#3E3232' }}
             />

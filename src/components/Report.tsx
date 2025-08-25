@@ -33,21 +33,35 @@ const FooterContent: React.FC = () => {
           <div className="text-center mb-8">
             <h3 className="text-lg font-semibold text-gray-700 mb-4">תודה מיוחדת:</h3>
             <div className="text-sm text-gray-600">
-              <div className="flex flex-wrap justify-center gap-x-2 gap-y-1">
-                <span>פיתוח והטמעה: <strong>יובל בר לוי</strong></span>
-                <span>|</span>
-                <span>עריכת הדו״ח: <strong>גל רייך</strong> ו<strong>עתליה אלון</strong></span>
-                <span className="hidden sm:inline">|</span>
-                <span>עורך: <strong>אופיר שמיר</strong></span>
-                <span>|</span>
-                <span>ניהול פרויקט: <strong>ראיין קורנל</strong></span>
+              <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-x-2 gap-y-1">
+                <div className="flex justify-center md:inline">
+                  <span>פיתוח והטמעה: <strong>יובל בר לוי</strong></span>
+                </div>
+                <div className="hidden md:inline">
+                  <span className="hidden md:inline">|</span>
+                </div>
+                <div className="flex justify-center md:inline">
+                  <span>ניתוח נתונים ועריכת הדו״ח: <strong>גל רייך</strong> ו<strong>עתליה אלון</strong></span>
+                </div>
+                <div className="hidden md:inline">
+                  <span className="hidden md:inline">|</span>
+                </div>
+                <div className="flex justify-center md:inline">
+                  <span>עורך: <strong>אופיר שמיר</strong></span>
+                </div>
+                <div className="hidden md:inline">
+                  <span>|</span>
+                </div>
+                <div className="flex justify-center md:inline">
+                  <span>ניהול פרויקט: <strong>ראיין קורנל</strong></span>
+                </div>
               </div>
             </div>
           </div>
           <div className="flex flex-row justify-center items-center gap-3 sm:gap-4 md:gap-8 mb-8">
             <div className="text-center">
               <a
-                href="https://www.natun.co.il"
+                href="https://www.natoon.co.il"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
