@@ -74,13 +74,17 @@ export default function EducationalClustersTable() {
                 </TableBody>
               </tr>
             ))}
-          </tbody>
-        </table>
-      </div>
-      <div className="flex items-start justify-between mt-4 text-sm text-gray-600 gap-4">
-        <span>* הציון המשוקלל חושב כך: מספרים נפגעים כולל X (משקל פצוע קל X מספר פצועים קל + משקל פצוע קשה X מספר פצועים קשה + משקל הרוג X מספר הרוגים). המשקל שניתן להרוג הוא 0.799, המשקל לפצוע קשה 0.199 והמשקל לפצוע קל 0.002. ציון גבוה משמעותו שלילית: יותר נפגעים או יותר נפגעים בחומרה קשה יותר</span>
+                      </tbody>
+            <tfoot>
+              <tr>
+                <td colSpan={6} className="bg-gray-50 p-4 text-sm text-gray-600 text-right">
+                  * הציון המשוקלל חושב כך: מספרים נפגעים כולל X (משקל פצוע קל X מספר פצועים קל + משקל פצוע קשה X מספר פצועים קשה + משקל הרוג X מספר הרוגים). המשקל שניתן להרוג הוא 0.799, המשקל לפצוע קשה 0.199 והמשקל לפצוע קל 0.002. ציון גבוה משמעותו שלילית: יותר נפגעים או יותר נפגעים בחומרה קשה יותר
+                </td>
+              </tr>
+            </tfoot>
+                    </table>
+        </div>
         <HorizontalScrollIndicator />
       </div>
-    </div>
   )
 }
