@@ -1,6 +1,6 @@
 export default function HorizontalScrollIndicator() {
   return (
-    <div className="md:hidden flex items-center justify-end gap-2 py-1 text-sm text-gray-600">
+    <div className="md:hidden flex items-center justify-end gap-2 py-1 text-sm text-gray-600 whitespace-nowrap">
       <span className="text-right">ניתן לגלול לצד</span>
       <svg 
         className="w-4 h-4 transform" 

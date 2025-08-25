@@ -22,7 +22,7 @@ export default function EducationalClustersTable() {
       {/* Title */}
       <div className="rounded-t-lg border border-gray-200 p-4" style={{backgroundColor: '#ECECEC'}}>
         <TableCaption className="text-center">
-          מקבצים מובילים בציון המשוקלל בחמש השנים האחרונות (כל מקבץ בגודל 1 קמ&sup2;):
+          מקבצים מובילים בציון המשוקלל* בחמש השנים האחרונות (כל מקבץ בגודל 1 קמ&sup2;):
         </TableCaption>
       </div>
 
@@ -77,7 +77,10 @@ export default function EducationalClustersTable() {
           </tbody>
         </table>
       </div>
-      <HorizontalScrollIndicator />
+      <div className="flex items-start justify-between mt-4 text-sm text-gray-600 gap-4">
+        <span>* הציון המשוקלל חושב כך: מספרים נפגעים כולל X (משקל פצוע קל X מספר פצועים קל + משקל פצוע קשה X מספר פצועים קשה + משקל הרוג X מספר הרוגים). המשקל שניתן להרוג הוא 0.799, המשקל לפצוע קשה 0.199 והמשקל לפצוע קל 0.002. ציון גבוה משמעותו שלילית: יותר נפגעים או יותר נפגעים בחומרה קשה יותר</span>
+        <HorizontalScrollIndicator />
+      </div>
     </div>
   )
 }

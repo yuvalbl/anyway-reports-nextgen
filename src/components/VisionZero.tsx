@@ -14,11 +14,7 @@ export const VisionZero: React.FC = () => {
     <div>
       {content.image && (
         <div className="flex justify-center mb-4">
-          <img
-            src={`/images/${content.image}`}
-            height="250"
-            alt={content.alt}
-          />
+          <img src={`/images/${content.image}`} height="250" alt={content.alt} />
         </div>
       )}
       <MainContent className="whitespace-pre-line">{content.body}</MainContent>
@@ -42,9 +38,9 @@ export const VisionZero: React.FC = () => {
   return (
     <div className="rounded-lg border border-neutral-200/70">
       <div className="text-xl font-bold my-6 text-center">
-        דרכים לשיפור הבטיחות בדרכים על פי חזון אפס
+        דרכים לשיפור הבטיחות בדרכים על פי  ׳חזון אפס׳ הרוגים ופצועים בתאונות דרכים{' '}
       </div>
-      
+
       {/* Mobile: Horizontal scrollable tabs */}
       <div className="lg:hidden">
         <div className="flex space-x-1 overflow-x-auto pb-2 scrollbar-hide">
@@ -84,7 +80,7 @@ export const VisionZero: React.FC = () => {
             ))}
           </div>
         </div>
-        
+
         <div className="flex-1 p-4 overflow-y-auto">
           {renderTabContent(VISION_ZERO_CONTENT[currentTab])}
         </div>

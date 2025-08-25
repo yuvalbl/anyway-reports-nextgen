@@ -31,7 +31,6 @@ const FooterContent: React.FC = () => {
       <div className="w-full bg-white py-8">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-8">
-            <h3 className="text-lg font-semibold text-gray-700 mb-4">תודה מיוחדת:</h3>
             <div className="text-sm text-gray-600">
               <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-x-2 gap-y-1">
                 <div className="flex justify-center md:inline">
@@ -54,6 +53,9 @@ const FooterContent: React.FC = () => {
                 </div>
                 <div className="flex justify-center md:inline">
                   <span>ניהול פרויקט: <strong>ראיין קורנל</strong></span>
+                </div>
+                <div className="flex justify-center md:inline mt-2">
+                  <span>תודה מיוחדת: <strong>דרור רשף</strong>, <strong>אבי קליימן</strong>, <strong>תמר קליר</strong> וקהילת מתנדבי נתון לשינוי</span>
                 </div>
               </div>
             </div>
