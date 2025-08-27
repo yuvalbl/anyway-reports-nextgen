@@ -74,7 +74,7 @@ const FooterContent: React.FC = () => {
 
             <div className="text-center">
               <a
-                href="https://haiku.ai"
+                href="https://www.haiku-code.com/projects-6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:opacity-80 transition-opacity duration-200"
