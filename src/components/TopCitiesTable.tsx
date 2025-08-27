@@ -196,13 +196,13 @@ const topCitiesData: CityRanking[] = [
   },
   {
     rank: 20,
-    cityName: 'עכו',
-    compositeScore: 65,
-    totalAccidents: 80,
-    totalInjured: 84,
-    lightInjuries: 81,
-    severeInjuries: 3,
-    deaths: 0,
+    cityName: 'מודיעין עילית',
+    compositeScore: 167,
+    totalAccidents: 50,
+    totalInjured: 51,
+    lightInjuries: 41,
+    severeInjuries: 8,
+    deaths: 2,
   },
 ]
 
@@ -212,7 +212,7 @@ export default function TopCitiesTable() {
       {/* Title */}
       <div className="rounded-t-lg border border-gray-200 p-4" style={{backgroundColor: '#E8F7FC'}}>
         <TableCaption className="text-center">
-          20 היישובים בעלי הדירוג המשוקלל הגבוה ביותר בין 2025-2020:
+          20 היישובים בעלי הציון המשוקלל* הגבוה ביותר בין 2025-2020:
         </TableCaption>
       </div>
 
@@ -275,6 +275,13 @@ export default function TopCitiesTable() {
               </tr>
             ))}
           </tbody>
+          <tfoot>
+            <tr>
+              <td colSpan={8} className="bg-gray-50 p-4 text-sm text-gray-600 text-right">
+                * הציון המשוקלל חושב כך: מספרים נפגעים כולל X (משקל פצוע קל X מספר פצועים קל + משקל פצוע קשה X מספר פצועים קשה + משקל הרוג X מספר הרוגים). המשקל שניתן להרוג הוא 0.799, המשקל לפצוע קשה 0.199 והמשקל לפצוע קל 0.002. ציון גבוה משמעותו שלילית: יותר נפגעים או יותר נפגעים בחומרה קשה יותר
+              </td>
+            </tr>
+          </tfoot>
         </table>
       </div>
       <HorizontalScrollIndicator />
