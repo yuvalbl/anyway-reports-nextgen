@@ -3,19 +3,21 @@ import { MainContent } from './Typography'
 
 export const ReportArticle: React.FC = () => {
   return (
-    <div>
-      <div className="rounded-3xl overflow-hidden mb-6">
-        <img 
-          src="/images/article-hero-image.jpg" 
-          alt="ילדים חוצים כביש ליד בית ספר"
-          className="w-full h-auto object-cover"
-        />
-      </div>
-      
+    <div>      
       <div className="space-y-6">
         <MainContent className="text-neutral-800">
           ynet מפרסם את הדוח בבלעדיות זו השנה השמינית ברציפות, למעט שנת הקורונה. במפה ניתן לראות כמה בני 19-5 נפגעו בכבישים הסמוכים למוסדות החינוך בין השעות 07:00 ועד לשעה 19:00 במשך חמש השנים האחרונות. הדוח גם משווה את התקופה האחרונה (2025-2020) למקבילה לה (2020-2015). הנתונים נאספו בפוליגונים של ריבועים בעלי צלע של קילומטר אחד, שבמרכזם בית ספר או ריכוז מוסדות לימוד. מיקומי בית הספר הגיעו ממאגר משרד החינוך &ndash; ומידע על התאונות הגיע מהלשכה המרכזית לסטטיסטיקה.
         </MainContent>
+
+        <div className="lg:float-right lg:ml-6 lg:mb-4 lg:w-1/2">
+          <div className="rounded-2xl overflow-hidden">
+            <img 
+              src="/images/article-content-image.jpg" 
+              alt="תמונת תוכן מאמר - בטיחות ילדים"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
 
         <MainContent className="text-neutral-800">
           מתוך 6,260 הילדים שנפגעו בסביבת הגנים ומוסדות החינוך ברחבי הארץ בחמש השנים האחרונות, 449 נפצעו באורח קשה. 30 תלמידים נהרגו. אחד הנתונים המדאיגים ביותר הוא הזינוק בנפגעים שהשתמשו בקורקינט חשמלי &ndash; מ-114 בין השנים 2020-2015 ל-628 בין 2025-2020, עלייה של יותר מפי חמש וחצי.
@@ -25,13 +27,7 @@ export const ReportArticle: React.FC = () => {
           רוב הנפגעים בתאונות (66%) הם הולכי רגל, ואחרים הם רוכבי הקורקינט החשמלי (10% לעומת 2% בתקופה המקבילה). שיעורם עלה על חשבון הנפגעים שהשתמשו באופניים, שירד מ-15% ל-13%, ומספר הנפגעים שהשתמשו באופניים חשמליים &ndash; שירד מ-16% ל-12%.
         </MainContent>
 
-        <div className="rounded-2xl overflow-hidden">
-          <img 
-            src="/images/article-content-image.jpg" 
-            alt="תמונת תוכן מאמר - בטיחות ילדים"
-            className="w-full h-auto object-cover"
-          />
-        </div>
+        <div className="clear-both"></div>
 
         <MainContent className="text-neutral-800">
           גל רייך מאירגון ׳נתון לשינוי׳, מוביל הפרויקט, מסביר כי &ldquo;סביבת מוסדות הלימוד היא המקום בו ילדים ובני נוער מבלים את מרבית שעות היום שלהם &ndash; בין אם בדרכם הלוך וחזור ללימודים ואם בשעות הפנאי. ככל שאלה תהיינה בטוחות יותר יפחתו הנפגעים מתאונות דרכים. בעוד שבעולם אנו רואים ירידה בכמות הנפגעים, הדוח מצביע על עליה מדאיגה בחלק מהערים בישראל &ndash; כחלק מהמגמה המדאיגה בכל הארץ&rdquo;.

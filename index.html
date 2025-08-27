@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>הכבישים המסוכנים בדרך לבית הספר שלכם</title>
-    <meta name="description" content="חפשו במפה וגלו: פרויקט מיוחד חושף את רמת הסיכון בכל הדרכים הסמוכות למוסדות חינוכיים בישראל" />
+    <meta
+      name="description"
+      content="חפשו במפה וגלו: פרויקט מיוחד חושף את רמת הסיכון בכל הדרכים הסמוכות למוסדות חינוכיים בישראל"
+    />
     <link rel="icon" type="image/png" href="/favicon.png" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="הכבישים המסוכנים בדרך לבית הספר שלכם - ynet" />
-    <meta property="og:description" content="חפשו במפה וגלו: פרויקט מיוחד חושף את רמת הסיכון בכל הדרכים הסמוכות למוסדות חינוכיים בישראל" />
+    <meta
+      property="og:description"
+      content="חפשו במפה וגלו: פרויקט מיוחד חושף את רמת הסיכון בכל הדרכים הסמוכות למוסדות חינוכיים בישראל"
+    />
     <meta
       property="og:image"
-      content="https://ynet-pic1.yit.co.il/picserver5/wcm_upload/2024/07/09/B1LH3j5DR/new_logo_gif_ynet.gif"
+      content="https://anyway-reports.netlify.app/images/social_share.jpeg"
     />
     <meta property="og:image:width" content="422" />
     <meta property="og:image:height" content="113" />
@@ -22,18 +28,19 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="הכבישים המסוכנים בדרך לבית הספר שלכם - ynet" />
-    <meta name="twitter:description" content="חפשו במפה וגלו: פרויקט מיוחד חושף את רמת הסיכון בכל הדרכים הסמוכות למוסדות חינוכיים בישראל" />
+    <meta
+      name="twitter:description"
+      content="חפשו במפה וגלו: פרויקט מיוחד חושף את רמת הסיכון בכל הדרכים הסמוכות למוסדות חינוכיים בישראל"
+    />
     <meta
       name="twitter:image"
-      content="https://ynet-pic1.yit.co.il/picserver5/wcm_upload/2024/07/09/B1LH3j5DR/new_logo_gif_ynet.gif"
+      content="https://anyway-reports.netlify.app/images/social_share.jpeg"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    
   </head>
   <body class="font-sans bg-neutral-50 text-neutral-900">
     <div id="root"></div>
@@ -91,6 +98,47 @@
         }
         loadChartbeat()
       })()
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }
+        if (!f._fbq) f._fbq = n
+        n.push = n
+        n.loaded = !0
+        n.version = '2.0'
+        n.queue = []
+        t = b.createElement(e)
+        t.async = !0
+        t.src = v
+        s = b.getElementsByTagName(e)[0]
+        s.parentNode.insertBefore(t, s)
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js')
+      fbq('init', '2856803197837755')
+      fbq('track', 'PageView')
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=2856803197837755&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-70V76NNE0T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-70V76NNE0T')
     </script>
   </body>
 </html>

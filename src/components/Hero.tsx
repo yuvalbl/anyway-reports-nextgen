@@ -20,13 +20,17 @@ export const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
-          backgroundImage: `url('/images/hero-background.jpg')`,
-          backgroundPosition: isMobile ? '-1250px center' : 'center'
+          backgroundImage: `url('/images/hero-background2.jpg')`,
+          backgroundPosition: isMobile ? '-540px center' : 'center'
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(250,254,255,0)] via-[rgba(250,254,255,0)] to-[rgba(232,247,252,1)]" style={{
           background: 'linear-gradient(180deg, rgba(250, 254, 255, 0) 14%, rgba(232, 247, 252, 1) 82%)'
         }}></div>
+        
+        <div className="absolute bottom-4 right-4 text-xs text-gray-600 opacity-80">
+          צילום: shutterstock
+        </div>
       </div>
       
       <div className="absolute bottom-15 z-10 max-w-7xl px-6 lg:px-16 xl:px-20">
@@ -44,12 +48,7 @@ export const Hero: React.FC = () => {
           style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}
         >
           <HeroSubtitle>
-            2,587,000 תלמידים וילדי גן יפתחו את שנת הלימודים ב-1 בספטמבר. 
-            חלקם יחצו כבישים וצמתים בדרכם אל מוסדות הלימוד, בין אם ברגל, 
-            באופניים, בקורקינט או בכלי רכב. ב-5 השנים האחרונות נפגעו 6,260 
-            ילדים בדרכים הללו - שחלקן נחשבות מסוכנות מאוד. ynet, דוח ANYWAY מבית 
-            &ldquo;נתון לשינוי&rdquo; ובשיתוף &ldquo;אור ירוק&rdquo; חושפים את אותם הכבישים: כתבו 
-            את שם המוסד החינוכי שלכם, גלו אותם במפה והצילו חיים
+            2,587,000 תלמידים וילדי גן יפתחו את שנת הלימודים ב-1/9. הם יחצו כבישים וצמתים בדרכם אל מוסדות הלימוד, בין אם ברגל, באופניים, בקורקינט או בכלי רכב. ב-5 השנים האחרונות נפגעו 6,260 ילדים בדרכים הללו - שחלקן מסוכנות. ynet מציג את מפת ANYWAY מבית "נתון לשינוי", שחושפת את אותם הכבישים: כתבו את שם המוסד החינוכי, גלו אותם במפה והצילו חיים
           </HeroSubtitle>
         </div>
         
@@ -58,7 +57,7 @@ export const Hero: React.FC = () => {
           style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}
         >
           <p className="text-lg font-semibold text-gray-600 tracking-wide">
-            תמר טרבלסי
+            תמר טרבלסי חדד
           </p>
         </div>
       </div>

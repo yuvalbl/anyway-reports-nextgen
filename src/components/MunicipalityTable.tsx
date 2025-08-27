@@ -36,7 +36,7 @@ export default function MunicipalityTable() {
       {/* Title */}
       <div className="rounded-t-lg border border-gray-200 p-4" style={{backgroundColor: '#ECECEC'}}>
         <TableCaption className="text-center">
-          היישובים בהם הייתה מגמה שלילית/חיובית בין שתי התקופות:
+          היישובים* בהם הייתה מגמה שלילית/חיובית בין שתי התקופות:
         </TableCaption>
       </div>
 
@@ -98,6 +98,13 @@ export default function MunicipalityTable() {
               )
             })}
           </tbody>
+          <tfoot>
+            <tr>
+              <td colSpan={4} className="bg-gray-50 p-4 text-sm text-gray-600 text-right">
+                * מבין היישובים בעלי הדירוג המשוקלל הגבוה ביותר
+              </td>
+            </tr>
+          </tfoot>
         </table>
       </div>
       <HorizontalScrollIndicator />

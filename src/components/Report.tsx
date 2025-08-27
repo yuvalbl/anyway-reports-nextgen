@@ -12,7 +12,7 @@ import { ReportArticle } from './ReportArticle'
 import { MapEmbed } from './MapEmbed'
 import natunLogo from '../assets/natun_leshinuy_logo.png'
 import haikuLogo from '../assets/haiku_logo.svg'
-import orYarokLogo from '../assets/or_yarok_logo.avif'
+
 import type { School, InjuredYearRecord, MonthlyRecord, SexRecord } from '../types'
 
 const containerSpacing = 'px-4 sm:p-6'
@@ -83,16 +83,7 @@ const FooterContent: React.FC = () => {
               </a>
             </div>
 
-            <div className="text-center">
-              <a
-                href="https://www.oryarok.org.il"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block hover:opacity-80 transition-opacity duration-200"
-              >
-                <img src={orYarokLogo} alt="אור ירוק" className="h-8 w-auto sm:h-10 md:h-12 lg:h-12 object-contain" />
-              </a>
-            </div>
+
           </div>
 
         </div>
