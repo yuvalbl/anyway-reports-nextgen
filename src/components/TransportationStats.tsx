@@ -69,9 +69,6 @@ export default function TransportationStats() {
                 &nbsp;
               </TableBody>
               <TableBody className="p-2 text-right border-r border-gray-300 whitespace-nowrap text-gray-600 font-semibold">
-                2020-2025
-              </TableBody>
-              <TableBody className="p-2 text-right border-r border-gray-300 whitespace-nowrap text-gray-600 font-semibold">
                 2015-2020
               </TableBody>
               <TableBody className="p-2 text-right border-r border-gray-300 whitespace-nowrap text-gray-600 font-semibold">
@@ -91,6 +88,9 @@ export default function TransportationStats() {
               </TableBody>
               <TableBody className="p-2 text-right border-r border-gray-300 whitespace-nowrap text-gray-600 font-semibold">
                 2015-2020
+              </TableBody>
+              <TableBody className="p-2 text-right border-r border-gray-300 whitespace-nowrap text-gray-600 font-semibold">
+                2020-2025
               </TableBody>
             </tr>
           </thead>
@@ -104,34 +104,34 @@ export default function TransportationStats() {
 
                 {/* Killed */}
                 <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  {mode.period2020_2025.deaths}
+                  {mode.period2015_2020.deaths}
                 </TableBody>
                 <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  {mode.period2015_2020.deaths}
+                  {mode.period2020_2025.deaths}
                 </TableBody>
 
                 {/* Severely Injured */}
                 <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  {mode.period2020_2025.severeInjuries}
+                  {mode.period2015_2020.severeInjuries}
                 </TableBody>
                 <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  {mode.period2015_2020.severeInjuries}
+                  {mode.period2020_2025.severeInjuries}
                 </TableBody>
 
                 {/* Lightly Injured */}
                 <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  {mode.period2020_2025.lightInjuries.toLocaleString()}
+                  {mode.period2015_2020.lightInjuries.toLocaleString()}
                 </TableBody>
                 <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  {mode.period2015_2020.lightInjuries.toLocaleString()}
+                  {mode.period2020_2025.lightInjuries.toLocaleString()}
                 </TableBody>
 
                 {/* Total Injured - now last */}
                 <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  {mode.period2020_2025.totalInjured.toLocaleString()}
+                  {mode.period2015_2020.totalInjured.toLocaleString()}
                 </TableBody>
                 <TableBody className="p-3 text-right border-r border-gray-300 whitespace-nowrap">
-                  {mode.period2015_2020.totalInjured.toLocaleString()}
+                  {mode.period2020_2025.totalInjured.toLocaleString()}
                 </TableBody>
               </tr>
             ))}
