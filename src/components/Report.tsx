@@ -28,10 +28,10 @@ type Props = {
 const FooterContent: React.FC = () => {
   return (
     <>
-      <div className="w-full bg-white py-8">
+      <div className="w-full bg-white py-8 text-lg ">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-8">
-            <div className="text-sm text-gray-600">
+            <div className="text-gray-600">
               <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-x-2 gap-y-1">
                 <div className="flex justify-center md:inline">
                   <span>פיתוח והטמעה: <strong>יובל בר לוי</strong></span>
@@ -54,7 +54,14 @@ const FooterContent: React.FC = () => {
                 <div className="flex justify-center md:inline">
                   <span>ניהול פרויקט: <strong>ראיין קורנל</strong></span>
                 </div>
-                <div className="flex justify-center md:inline mt-2">
+              </div>
+            </div>
+            <div className="text-center my-2">
+              <div className="text-gray-600">
+                <div className="flex justify-center mb-2">
+                  <span>צילומים: <strong>shutterstock</strong></span>
+                </div>
+                <div className="flex justify-center">
                   <span>תודה מיוחדת: <strong>דרור רשף</strong>, <strong>אבי קליימן</strong>, <strong>תמר קליר</strong> וקהילת מתנדבי נתון לשינוי</span>
                 </div>
               </div>
